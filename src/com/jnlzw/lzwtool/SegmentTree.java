@@ -3,7 +3,6 @@ package com.jnlzw.lzwtool;
 /**
  * Created by lzw on 2019/9/25.
  */
-//    线段树的树节点
 
 
 //线段树类
@@ -66,6 +65,11 @@ public class SegmentTree {
 
 
     /**
+     * @param root 根节点
+     * @param astart  当前节点覆盖的区间
+     * @param aend
+     * @param bstart  要查找的区间
+     * @param bend
      * @return  区间最大值
      */
     public int searchMax(int root, int astart, int aend, int bstart, int bend) {    //a为当前节点说表示的区间，b为要查找的区间
@@ -76,6 +80,11 @@ public class SegmentTree {
     }
 
     /**
+     * @param root 根节点
+     * @param astart  当前节点覆盖的区间
+     * @param aend
+     * @param bstart  要查找的区间
+     * @param bend
      * @return 区间最小值
      */
     public int searchMin(int root, int astart, int aend, int bstart, int bend) {    //a为当前节点说表示的区间，b为要查找的区间
@@ -84,4 +93,6 @@ public class SegmentTree {
         int mid = (astart + aend) / 2;
         return Math.min(searchMin(root * 2 + 1, astart, mid, bstart, bend) , searchMin(root * 2 + 2, mid + 1, aend, bstart, bend));
     }
+
+
 }
