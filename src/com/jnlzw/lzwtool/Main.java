@@ -11,6 +11,9 @@ public class Main {
         segmentTree.modifyOneValue(0,100);
         System.out.println(segmentTree.maxRange(0,5));
 
+        UnionFindSet unionFindSet=new UnionFindSet(100);
+        unionFindSet.union(1,2);
+        System.out.println(unionFindSet.find(1)+" "+unionFindSet.find(2));
 
     }
 }

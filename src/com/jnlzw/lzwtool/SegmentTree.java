@@ -14,15 +14,16 @@ public class SegmentTree {
         int max;
         int lazy;
     }
+
     private int N;
     //修改某个值；修改区间内值
     //给区间内同时增加或减少某个值
     public Tree[] Tree = new Tree[1000];
 
 
-    public SegmentTree (int num[]){
-        N=num.length-1;
-        build(0,num,0,N);
+    public SegmentTree(int num[]) {
+        N = num.length - 1;
+        build(0, num, 0, N);
     }
 
     /**
@@ -52,13 +53,12 @@ public class SegmentTree {
 
 
     /**
-     *
      * @param l 区间左右边界
      * @param r
      * @return 返回区间值之和
      */
-    public int sumRange(int l,int r){
-        return searchAll(0,0,N,l,r);
+    public int sumRange(int l, int r) {
+        return searchAll(0, 0, N, l, r);
     }
 
     private int searchAll(int root, int astart, int aend, int bstart, int bend) {    //a为当前节点说表示的区间，b为要查找的区间
@@ -70,13 +70,12 @@ public class SegmentTree {
 
 
     /**
-     *
      * @param l 区间左右边界
      * @param r
      * @return 返回区间最大值
      */
-    public int maxRange(int l,int r){
-        return searchMax(0,0,N,l,r);
+    public int maxRange(int l, int r) {
+        return searchMax(0, 0, N, l, r);
     }
 
     private int searchMax(int root, int astart, int aend, int bstart, int bend) {    //a为当前节点说表示的区间，b为要查找的区间
@@ -87,14 +86,14 @@ public class SegmentTree {
     }
 
     /**
-     *
      * @param l 区间左右边界
      * @param r
      * @return 返回区间最小值
      */
-    public int minRange(int l,int r){
-        return searchMin(0,0,N,l,r);
+    public int minRange(int l, int r) {
+        return searchMin(0, 0, N, l, r);
     }
+
     private int searchMin(int root, int astart, int aend, int bstart, int bend) {    //a为当前节点说表示的区间，b为要查找的区间
         if (astart > bend || aend < bstart) return 0;     //区间无交集
         if (astart >= bstart && aend <= bend) return Tree[root].min;  //当前区间被目标区间包含
@@ -104,20 +103,19 @@ public class SegmentTree {
 
 
     /**
-     *
      * @param index 下标
-     * @param value  修改值
+     * @param value 修改值
      */
-    public void modifyOneValue(int index,int value){
-        updateone(0,0,N-1,index,value);
+    public void modifyOneValue(int index, int value) {
+        updateone(0, 0, N - 1, index, value);
     }
 
     private void updateone(int root, int start, int end, int index, int value) {
         if (start == end) {
             if (start == index) {
                 Tree[root].v = value;
-                Tree[root].max=value;
-                Tree[root].min=value;
+                Tree[root].max = value;
+                Tree[root].min = value;
             }
             return;
         }//找到对应的节点
