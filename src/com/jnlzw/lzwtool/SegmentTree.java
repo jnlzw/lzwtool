@@ -18,7 +18,7 @@ public class SegmentTree {
     private int N;
     //修改某个值；修改区间内值
     //给区间内同时增加或减少某个值
-    public Tree[] Tree = new Tree[1000];
+    private Tree[] Tree = new Tree[1000];
 
 
     public SegmentTree(int num[]) {

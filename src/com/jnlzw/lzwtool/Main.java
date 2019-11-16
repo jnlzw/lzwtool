@@ -5,6 +5,7 @@ package com.jnlzw.lzwtool;
  */
 public class Main {
     public static void main(String[] args) {
+
         int[] nums={1,2,3,4,5,6};
         SegmentTree segmentTree = new SegmentTree(nums);
         System.out.println(segmentTree.maxRange(0,5));
