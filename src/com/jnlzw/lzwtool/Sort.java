@@ -1,4 +1,5 @@
 package com.jnlzw.lzwtool;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,9 +15,9 @@ public class Sort {
             key = i;
             while (key > 0) {
                 if (num[key] < num[key - 1]) {
-                    int c = num[key];
-                    num[key] = num[key - 1];
-                    num[key - 1] = c;
+                    num[key] += num[key - 1];
+                    num[key - 1] = num[key] - num[key - 1];
+                    num[key] = num[key] - num[key - 1];
                     key--;
                 } else break;
             }
@@ -25,14 +26,15 @@ public class Sort {
 
 
     //归并排序
-    public void mergeSort(int[] num){
-        perMergeSort(num,0,num.length-1);
+    public void mergeSort(int[] num) {
+        perMergeSort(num, 0, num.length - 1);
     }
-    private void perMergeSort(int[]num,int s, int e) {
+
+    private void perMergeSort(int[] num, int s, int e) {
         if (s == e) return;
         int m = (s + e) / 2;
-        perMergeSort(num,s, m);
-        perMergeSort(num,m + 1, e);
+        perMergeSort(num, s, m);
+        perMergeSort(num, m + 1, e);
         int[] tempNum = new int[num.length];
         int i = s, j = m + 1, index = 0;
         while (i <= m && j <= e) {
@@ -46,7 +48,7 @@ public class Sort {
 
     //堆排序
     public void heapSort(int[] num) {
-        int N=num.length;
+        int N = num.length;
         int tempN = N;
         buildMaxHeap(num);
         for (int i = N - 1; i > 0; i--) {
@@ -54,12 +56,13 @@ public class Sort {
             num[i] = num[0];
             num[0] = c;
             N = N - 1;//注意！ 每次将最后一位置为最大位后 maxHeapify时不再考虑
-            maxHeapify(num,0);
+            maxHeapify(num, 0);
         }
         N = tempN;
     }
-    private void maxHeapify(int[] num,int index) {
-        int N=num.length;
+
+    private void maxHeapify(int[] num, int index) {
+        int N = num.length;
         int largest = index;
         if (index * 2 + 1 < N && num[largest] > num[index * 2 + 1]) {
             largest = index * 2 + 1;
@@ -71,29 +74,31 @@ public class Sort {
             int c = num[index];
             num[index] = num[largest];
             num[largest] = c;
-            maxHeapify(num,largest);
-        }
-    }
-    private void buildMaxHeap(int[] num) {
-        for (int i = num.length / 2; i >= 0; i--) {
-            maxHeapify(num,i);
+            maxHeapify(num, largest);
         }
     }
 
+    private void buildMaxHeap(int[] num) {
+        for (int i = num.length / 2; i >= 0; i--) {
+            maxHeapify(num, i);
+        }
+    }
 
 
     //快速排序
-    public void quickSort(int[] num){
-        perQuickSort(num,0,num.length-1);
+    public void quickSort(int[] num) {
+        perQuickSort(num, 0, num.length - 1);
     }
-    private void perQuickSort(int[] num,int p, int r) {
+
+    private void perQuickSort(int[] num, int p, int r) {
         if (p < r) {
-            int q = partition(num,p, r);
-            perQuickSort(num,p, q - 1);
-            perQuickSort(num,q + 1, r);
+            int q = partition(num, p, r);
+            perQuickSort(num, p, q - 1);
+            perQuickSort(num, q + 1, r);
         }
     }
-    private int partition(int[] num,int p, int r) {
+
+    private int partition(int[] num, int p, int r) {
         int key = num[r];
         int i = p;
         for (int j = p; j < r; j++) {
@@ -110,8 +115,9 @@ public class Sort {
     }
 
     //计数排序
+    //计数排序的count数组长度为10000，num数组内的数字最大值为9999，可以更改。
     public void countSort(int[] num) {
-        int N=num.length;
+        int N = num.length;
         int[] count = new int[10000];
         for (int i = 0; i < 100; i++) count[i] = 0;
         for (int value : num) count[value]++;
@@ -127,23 +133,26 @@ public class Sort {
 
 
     //翻转数组
-    public void reversalArray(int[] num){
-        int l=0,r=num.length-1;
-        while(l<r){
-            num[l]+=num[r];
-            num[r]=num[l]-num[r];
-            num[l]=num[l]-num[r];
-            l++;r--;
+    public void reversalArray(int[] num) {
+        int l = 0, r = num.length - 1;
+        while (l < r) {
+            num[l] += num[r];
+            num[r] = num[l] - num[r];
+            num[l] = num[l] - num[r];
+            l++;
+            r--;
         }
     }
 
 
-
     //全部默认从小到大排序
     public static void main(String[] args) {
-        int[] num={3,4,1,4,5,7,8,23,0};
-        new Sort().countSort(num);
-        for(int e:num)System.out.println(e);
+        int[] num = {3, 4, 1, 4, 5, 7, 8, 23, 0};
+        Sort sort = new Sort();
+        sort.insertionSort(num);
+        sort.reversalArray(num);
+        for (int e : num) System.out.println(e);
+
     }
 }
 
