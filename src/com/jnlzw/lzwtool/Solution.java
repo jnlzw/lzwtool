@@ -25,7 +25,7 @@ class Solution {
         String endWord = "cog";
         List<String>list= Arrays.asList("hot", "dot", "dog", "lot", "log", "cog");
         List<String>wordList=new ArrayList<>(list);
-        int[][] mapp=new int[10][10];
+        int[][] mapp=new int[100][100];
         wordList.add(beginWord);
         if (!wordList.contains(endWord)){
             System.out.println("endWord不在字典中");
@@ -39,11 +39,9 @@ class Solution {
         }
         int s=wordList.size()-1,e=wordList.indexOf(endWord);//设置起点和终点
         int minSize=1000;
-        int[] used=new int[10];
         List<List<Integer>> Q = new ArrayList<>();
         List<Integer>temp=new ArrayList<>();
         temp.add(s);Q.add(temp);//加入起点
-        used[s]=1;
         //开始广搜
         while (!Q.isEmpty()){
             temp=Q.remove(0);
@@ -55,8 +53,7 @@ class Solution {
             }
             int now=temp.get(temp.size()-1);
             for(int i=0;i<mapp.length;i++){
-                if(mapp[now][i]==1&&used[i]==0){
-                    if (i!=e)used[i]=1;//终点不能设置为1
+                if(mapp[now][i]==1&&!temp.contains(i)){
                     List<Integer>tTemp=new ArrayList<>(temp);
                     tTemp.add(i);
                     Q.add(tTemp);
