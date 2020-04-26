@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool;
+package com.jnlzw.lzwtool.DataStructures;
 
 /**
  * Created by lzw on 2019/10/20.
@@ -21,7 +21,6 @@ public class UnionFindSet {
 
     /**
      * 查找根节点
-     *
      * @param a
      * @return
      */
@@ -33,7 +32,6 @@ public class UnionFindSet {
 
     /**
      * 合并两个节点
-     *
      * @param a
      * @param b
      * @return 成功返回true，若两个根节点本来就在一棵树下返回false
@@ -48,4 +46,15 @@ public class UnionFindSet {
         weight[b] += 1;
         return true;
     }
+
+    /**
+     * 查询两个节点是否在同一颗树
+     * @param a
+     * @param b
+     * @return
+     */
+    public boolean judge(int a, int b) {
+        return find(a)==find(b);
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool;
+package com.jnlzw.lzwtool.Algorithms;
 
 /**
  * Created by lzw on 2019/10/28.

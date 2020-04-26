@@ -1,14 +1,10 @@
-package com.jnlzw.lzwtool;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+package com.jnlzw.lzwtool.Algorithms;
+import java.util.*;
 
 
 public class Sort {
 
+    //插入排序
     public <T> void insertionSort(T[] num, Comparator<? super T> c) {
         int key;
         for (int i = 1; i < num.length; i++) {
@@ -23,6 +19,7 @@ public class Sort {
             }
         }
     }
+
 
 
     //归并排序
@@ -46,46 +43,43 @@ public class Sort {
     }
 
 
+
     //堆排序
     public <T> void heapSort(T[] num,Comparator<? super T> c) {
-        int N = num.length;
-        int tempN = N;
+        int N=num.length;
         buildMaxHeap(num,c);
         for (int i = N - 1; i > 0; i--) {
             T t = num[i];
             num[i] = num[0];
             num[0] = t;
             N = N - 1;//注意！ 每次将最后一位置为最大位后 maxHeapify时不再考虑
-            maxHeapify(num, 0,c);
+            maxHeapify(num,0,N,c);
         }
-        N = tempN;
     }
-
-    private <T> void maxHeapify(T[] num, int index,Comparator<? super T> c) {
-        int N = num.length;
+    private <T> void maxHeapify(T[] num,int index,int length,Comparator<? super T> c) {
         int largest = index;
-        if (index * 2 + 1 < N && c.compare(num[largest] , num[index * 2 + 1])>0) {
+        if (index * 2 + 1 < length && c.compare(num[largest] , num[index * 2 + 1])>0) {
             largest = index * 2 + 1;
         }
-        if (index * 2 + 2 < N && c.compare(num[largest] , num[index * 2 + 1])>0) {
+        if (index * 2 + 2 < length && c.compare(num[largest] , num[index * 2 + 1])>0) {
             largest = index * 2 + 2;
         }
         if (largest != index) {
             T t = num[index];
             num[index] = num[largest];
             num[largest] = t;
-            maxHeapify(num, largest,c);
+            maxHeapify(num,largest,length,c);
         }
     }
-
-    private <T> void buildMaxHeap(T[] num,Comparator<? super T> c) {
+    private<T>  void buildMaxHeap(T[] num,Comparator<? super T> c) {
         for (int i = num.length / 2; i >= 0; i--) {
-            maxHeapify(num, i,c);
+            maxHeapify(num,i,num.length,c);
         }
     }
 
 
-    //快速排序
+
+    //快速排序 随机数优化
     public <T> void quickSort(T[] num,Comparator<? super T> c) {
         perQuickSort(num, 0, num.length - 1,c);
     }
@@ -99,7 +93,9 @@ public class Sort {
     }
 
     private <T> int partition(T[] num, int p, int r,Comparator<? super T> c) {
-        T key = num[r];
+        Random random=new Random();
+        //随机选取key值，防止算法退化为冒泡
+        T key = num[p+ random.nextInt(r-p)];
         int i = p;
         for (int j = p; j < r; j++) {
             if (c.compare(num[j] , key)<0) {

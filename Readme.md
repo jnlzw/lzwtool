@@ -54,19 +54,20 @@
 ### 1构造器
     public UnionFindSet(int n){
 参数为并查集最大支持的节点数。
+### 2查询节点是否在同一颗树上
+    /**
+     * 查询两个节点是否在同一颗树
+     */
+    public boolean judge(int a, int b) 
 ### 2查询根节点
     /**
      * 查找根节点
-     * @param a
-     * @return
      */
     public int find(int a){
 采用路径压缩可以降低大量重复查找的时间。
 ### 3合并节点
     /**
      * 合并两个节点
-     * @param a
-     * @param b
      * @return 成功返回true，若两个根节点本来就在一棵树下返回false
      */
     public boolean union(int a,int b){
