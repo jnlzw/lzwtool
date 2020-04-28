@@ -1,6 +1,7 @@
 package com.jnlzw.lzwtool;
 
 import java.util.*;
+import java.util.concurrent.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -13,9 +14,10 @@ public class Main {
     static class cmp implements Comparator<Integer> {
         @Override
         public int compare(Integer o1, Integer o2) {
-            return o1-o2;
+            return o1 - o2;
         }
     }
+
 
     public static void main(String[] args) {
 //        Sort sort=new Sort();
@@ -26,5 +28,4 @@ public class Main {
 //        System.out.println(Arrays.toString(num));
 
     }
-
 }
