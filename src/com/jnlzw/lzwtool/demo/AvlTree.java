@@ -50,7 +50,6 @@ public class AvlTree<T extends Comparable<? super T>> {
         root = null;
     }
 
-
     //准确查询 返回行号
     public List<Integer> contains(T x) {
         return contains(x, root);
@@ -68,7 +67,6 @@ public class AvlTree<T extends Comparable<? super T>> {
         }
         return null;   // No match
     }
-
 
     //范围查询
     public List<Integer> contains(T l, T r) {
@@ -90,11 +88,9 @@ public class AvlTree<T extends Comparable<? super T>> {
         }
     }
 
-
     public boolean isEmpty() {
         return root == null;
     }
-
 
     //排序输出avl树
     public void printTree() {
@@ -103,7 +99,6 @@ public class AvlTree<T extends Comparable<? super T>> {
         else
             printTree(root);
     }
-
 
     //在avl树中插入数据，重复数据复略
     // x是排序元素 key是行号
@@ -140,7 +135,6 @@ public class AvlTree<T extends Comparable<? super T>> {
         return t;
     }
 
-
     //中序遍历avl树
     private void printTree(AvlNode<T> t) {
         if (t != null) {
@@ -150,7 +144,6 @@ public class AvlTree<T extends Comparable<? super T>> {
         }
     }
 
-
     //求高度
     private int height(AvlNode<T> t) {
         return t == null ? -1 : t.height;
@@ -159,7 +152,6 @@ public class AvlTree<T extends Comparable<? super T>> {
     public int printHeight(){
         return height(root);
     }
-
 
     //带左子树旋转,适用于LL型
     private AvlNode<T> rotateWithLeftChild(AvlNode<T> k2) {
@@ -192,7 +184,6 @@ public class AvlTree<T extends Comparable<? super T>> {
         k1.right = rotateWithLeftChild(k1.right);
         return rotateWithRightChild(k1);
     }
-
 
     public static void main(String[] args) {
 

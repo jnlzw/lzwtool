@@ -17,9 +17,6 @@ public class Test {
         System.out.println(map.size());
         System.out.println("解析数据耗时" + (endtime - time) + "毫秒");
 
-
-
-
         time = System.currentTimeMillis();
         for (int i = 0; i <10000; i++) avlTree.contains(111, 222);
         endtime = System.currentTimeMillis();
@@ -30,11 +27,8 @@ public class Test {
         endtime = System.currentTimeMillis();
         System.out.println("查询耗时" + (endtime - time) + "毫秒");
 
-
         System.out.println("map.size() = " + map.size());
         //avlTree.printTree();
         System.out.println("avlTree.printHeight() = " + avlTree.printHeight());
-
-
     }
 }

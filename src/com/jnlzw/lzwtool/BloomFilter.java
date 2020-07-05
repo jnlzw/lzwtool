@@ -44,5 +44,6 @@ public class BloomFilter {
     public static void main(String[] args) {
         BloomFilter bloomFilter=new BloomFilter(10000,0.1);
         bloomFilter.put("aaa");
+
     }
 }

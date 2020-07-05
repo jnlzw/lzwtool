@@ -27,9 +27,8 @@ public class Main {
 //        sort.heapSort(num,new cmp());
 //        System.out.println(Arrays.toString(num));
 
-        List<Integer> list=new LinkedList<>();
-        for (int i = 0; i < 100000; i++) {
-            list.add(i);
-        }
+        System.out.println(1034170131 % 4);
+        System.out.println(1034170131 / 4);
+        System.out.println(258542532 * 4 + 3);
     }
 }

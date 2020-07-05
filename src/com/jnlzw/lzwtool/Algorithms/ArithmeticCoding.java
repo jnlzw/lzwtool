@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Arithmeticcoding {
+public class ArithmeticCoding {
     private List<String> symbol;
     private List<Double> p;
     private List<Double> range;
-    public Arithmeticcoding(List<String> symbol,List<Double> p){
+    public ArithmeticCoding(List<String> symbol, List<Double> p){
         this.symbol=symbol;
         this.p=p;
         List<Double> temp=new ArrayList<>();
@@ -49,7 +49,7 @@ public class Arithmeticcoding {
         System.out.println();
     }
     public static void main(String[] args) {
-        Arithmeticcoding arithmeticcoding=new Arithmeticcoding(Arrays.asList("A","B","C","D"),Arrays.asList(0.1,0.2,0.3,0.4));
+        ArithmeticCoding arithmeticcoding=new ArithmeticCoding(Arrays.asList("A","B","C","D"),Arrays.asList(0.1,0.2,0.3,0.4));
         arithmeticcoding.encode(Arrays.asList("A","B","D","C","D"));
         arithmeticcoding.decode(0.02632,5);
     }

@@ -6,33 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="加入快速幂">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Arithmeticcoding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/LZW.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/BloomFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/HashLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/RandomHashLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/AvlTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/FileDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/LargeExcelFileReadUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/SheetHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/test.java" afterDir="false" />
+    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lzw-tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lzw-tool.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Arithmeticcoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/BloomFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/SingletonPattern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/AvlTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/AvlTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -62,66 +44,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/HashLock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/RandomHashLock.java">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../JavaCode/src/com/company/code/java/lang/System.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7750">
-              <caret line="352" column="30" selection-start-line="352" selection-start-column="30" selection-end-line="352" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../JavaCode/src/com/company/code/java/util/HashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10950">
-              <caret line="473" column="11" selection-start-line="473" selection-start-column="11" selection-end-line="473" selection-end-column="11" />
-              <folding>
-                <element signature="e#19296#19297#0" expanded="true" />
-                <element signature="e#19379#19380#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="411">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Arithmeticcoding.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="775">
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,10 +69,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/FileDown.java">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1675">
-              <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+            <state relative-caret-position="250">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#855#856#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,32 +94,68 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../JavaCode/src/com/company/code/java/io/BufferedInputStream.java">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Pow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3950">
-              <caret line="181" column="11" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
-              <folding>
-                <element signature="e#5951#5952#0" expanded="true" />
-                <element signature="e#5996#5997#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="175">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../JavaCode/src/com/company/code/java/io/FilterInputStream.java">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Sort.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
-              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../JavaCode/src/com/company/code/java/io/InputStream.java">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/HashLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+            <state relative-caret-position="625">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/BloomFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="687">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/KMP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+              <folding>
+                <element signature="method#KMPcompaer#0;class#KMP#0" />
+                <element signature="method#getNextArray#0;class#KMP#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/LZW.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1150">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,17 +206,13 @@
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/SingletonPattern.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Pow.java" />
-        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/BloomFilter.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/test.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/AvlTree.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/LargeExcelFileReadUtil.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo.java" />
-        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/AvlTree.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/LargeExcelFileReadUtil.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/SheetHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Test.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Readme.md" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/down.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Arithmeticcoding.java" />
@@ -237,6 +221,13 @@
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/LZW.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/RandomHashLock.java" />
         <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/HashLock.java" />
+        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/BloomFilter.java" />
+        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Test.java" />
+        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/AvlTree.java" />
+        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.java" />
+        <option value="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java" />
       </list>
     </option>
   </component>
@@ -297,19 +288,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lzwtool" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lzw-tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lzw-tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lzwtool" type="462c0819:PsiDirectoryNode" />
-              <item name="RFID" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,13 +332,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="应用程序.HashLock">
-    <configuration name="FileDown" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.demo.FileDown" />
+  <component name="RunManager" selected="应用程序.GeneticAlgorithm">
+    <configuration name="BloomFilter" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.BloomFilter" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.demo.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneticAlgorithm" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Algorithms.GeneticAlgorithm" />
+      <module name="lzw-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jnlzw.lzwtool.Algorithms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -375,12 +372,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LZW" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Algorithms.LZW" />
+    <configuration name="Main" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Main" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.Algorithms.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -388,25 +385,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RandomHashLock" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.RFID.RandomHashLock" />
+    <configuration name="Test" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.demo.Test" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.RFID.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Solutions.Solution" />
-      <module name="lzw-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.Solutions.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -416,11 +400,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.GeneticAlgorithm" />
+        <item itemvalue="应用程序.Test" />
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.BloomFilter" />
         <item itemvalue="应用程序.HashLock" />
-        <item itemvalue="应用程序.RandomHashLock" />
-        <item itemvalue="应用程序.LZW" />
-        <item itemvalue="应用程序.Solution" />
-        <item itemvalue="应用程序.FileDown" />
       </list>
     </recent_temporary>
   </component>
@@ -521,7 +505,12 @@
       <workItem from="1590817275117" duration="5029000" />
       <workItem from="1590911846411" duration="6764000" />
       <workItem from="1590996981471" duration="4531000" />
-      <workItem from="1591063161734" duration="3904000" />
+      <workItem from="1591063161734" duration="4708000" />
+      <workItem from="1592056128480" duration="135000" />
+      <workItem from="1592394215432" duration="75000" />
+      <workItem from="1592395921148" duration="2278000" />
+      <workItem from="1592493514464" duration="31000" />
+      <workItem from="1593930770385" duration="593000" />
     </task>
     <task id="LOCAL-00001" summary="单词接龙">
       <created>1576465484781</created>
@@ -544,11 +533,18 @@
       <option name="project" value="LOCAL" />
       <updated>1588042662253</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="加入排序二叉树优化excel查询">
+      <created>1591089491692</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591089491692</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242036000" />
+    <option name="totallyTimeSpent" value="245952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -560,10 +556,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4986339" visible="true" weight="0.118336886" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4986339" visible="true" weight="0.123667374" />
       <window_info id="Structure" order="1" sideWeight="0.50136614" side_tool="true" weight="0.13646056" />
       <window_info id="设计师" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -573,7 +569,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32744282" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3908524" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27130976" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3170478" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -582,7 +578,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32738718" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32640332" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32120582" />
       <window_info anchor="bottom" id="Spring" order="13" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
@@ -645,7 +641,8 @@
     <MESSAGE value="单词接龙" />
     <MESSAGE value="添加算法包" />
     <MESSAGE value="加入快速幂" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入快速幂" />
+    <MESSAGE value="加入排序二叉树优化excel查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入排序二叉树优化excel查询" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -681,44 +678,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/aa.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/a.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Pow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/KMP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-          <folding>
-            <element signature="method#KMPcompaer#0;class#KMP#0" />
-            <element signature="method#getNextArray#0;class#KMP#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Sort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../JavaCode/src/com/company/code/java/util/concurrent/FutureTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2450">
           <caret line="131" column="11" selection-start-line="131" selection-start-column="11" selection-end-line="131" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
@@ -815,16 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../JavaCode/src/com/company/code/java/lang/Comparable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2750">
@@ -836,38 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9225">
           <caret line="395" column="10" selection-start-line="395" selection-start-column="10" selection-end-line="395" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/BloomFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/LargeExcelFileReadUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#processAllSheets#0;class#LargeExcelFileReadUtil#0" />
-            <element signature="method#fetchSheetParser#0;class#LargeExcelFileReadUtil#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -889,16 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1600">
           <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/SheetHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="69" column="45" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,26 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/AvlTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="method#contains#2;class#AvlTree#0" />
-            <element signature="method#insert#1;class#AvlTree#0" />
-            <element signature="e#4020#4021#0" expanded="true" />
-            <element signature="e#4068#4069#0" expanded="true" />
-            <element signature="method#rotateWithLeftChild#0;class#AvlTree#0" />
-            <element signature="method#rotateWithRightChild#0;class#AvlTree#0" />
-            <element signature="method#doubleWithLeftChild#0;class#AvlTree#0" />
-            <element signature="method#doubleWithRightChild#0;class#AvlTree#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1150">
@@ -1007,16 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/LZW.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
-          <caret line="50" column="16" selection-start-line="50" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../JavaCode/src/com/company/code/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7750">
@@ -1035,29 +916,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Test.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="775">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Arithmeticcoding.java">
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/RandomHashLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="575">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/FileDown.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1675">
-          <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+        <state relative-caret-position="75">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/SheetHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="69" column="45" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/LargeExcelFileReadUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#processAllSheets#0;class#LargeExcelFileReadUtil#0" />
+            <element signature="method#fetchSheetParser#0;class#LargeExcelFileReadUtil#0" />
           </folding>
         </state>
       </provider>
@@ -1087,20 +997,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/RandomHashLock.java">
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/demo/AvlTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="524">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AvlTree#0" />
+            <element signature="method#contains#2;class#AvlTree#0" />
+            <element signature="method#insert#1;class#AvlTree#0" />
+            <element signature="method#rotateWithLeftChild#0;class#AvlTree#0" />
+            <element signature="method#rotateWithRightChild#0;class#AvlTree#0" />
+            <element signature="method#doubleWithLeftChild#0;class#AvlTree#0" />
+            <element signature="method#doubleWithRightChild#0;class#AvlTree#0" />
+            <element signature="method#main#0;class#AvlTree#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../新建文件夹/JAVA/admin/src/geneticAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="114" />
+          <folding>
+            <element signature="e#0#3818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/KMP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding>
+            <element signature="method#KMPcompaer#0;class#KMP#0" />
+            <element signature="method#getNextArray#0;class#KMP#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/LZW.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Pow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Sort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/RFID/HashLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        <state relative-caret-position="625">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/BloomFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
