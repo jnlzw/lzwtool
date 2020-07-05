@@ -1,7 +1,4 @@
-package com.jnlzw.lzwtool;
-
-import java.util.Arrays;
-import java.util.HashMap;
+package com.jnlzw.lzwtool.DataStructures;
 
 /**
  * Created by lzw on 2020/4/29
