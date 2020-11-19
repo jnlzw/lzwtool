@@ -1,5 +1,6 @@
 package com.jnlzw.lzwtool;
 
+import java.util.Objects;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
@@ -20,13 +21,8 @@ public class Test implements Callable<String> {
     }
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        Test test=new Test();
-        Thread thread=new Thread(new FutureTask<>(test),"name");
-        Thread thread2=new Thread(new FutureTask<>(test),"name2");
-        Thread mainThread=Thread.currentThread();
-        thread.start();
-        thread2.start();
-        System.out.println("mainThread.getPriority() = " + mainThread.getPriority());
-        System.out.println("thread.getName() = " + thread.getName());
+        String s="1";
+        String s1=new String("1");
+        System.out.println(Objects.equals(s, s1));
     }
 }
