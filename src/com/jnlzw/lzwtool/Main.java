@@ -16,11 +16,5 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> test=new ArrayList<>();
-        test.add(1);
-        test.add(2);
-        Integer a=test.get(0);
-        a=100;
-        test.forEach(System.out::println);
     }
 }
