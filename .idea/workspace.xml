@@ -27,11 +27,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="字符串模拟大数计算">
+    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="删除RFID">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="C:\Users\lzw\.m2\repository" />
-        <option name="mavenHome" value="D:\IDEA\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3" />
         <option name="userSettingsFile" value="C:\Users\lzw\.m2\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -183,15 +181,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -333,6 +329,16 @@
       <workItem from="1605106993215" duration="20000" />
       <workItem from="1605786858545" duration="26000" />
       <workItem from="1605787821511" duration="546000" />
+      <workItem from="1605948977259" duration="187000" />
+      <workItem from="1606290677856" duration="619000" />
+      <workItem from="1606393257598" duration="463000" />
+      <workItem from="1610116611236" duration="229000" />
+      <workItem from="1610116945581" duration="390000" />
+      <workItem from="1610117402070" duration="372000" />
+      <workItem from="1610117789791" duration="69000" />
+      <workItem from="1610117869841" duration="53000" />
+      <workItem from="1610121145249" duration="31000" />
+      <workItem from="1610292106902" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="单词接龙">
       <created>1576465484781</created>
@@ -383,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605788244242</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="删除RFID">
+      <created>1605949150771</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605949150771</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -433,73 +446,8 @@
     <MESSAGE value="基因遗传算法" />
     <MESSAGE value="修改Readme" />
     <MESSAGE value="字符串模拟大数计算" />
-    <option name="LAST_COMMIT_MESSAGE" value="字符串模拟大数计算" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1604553779431">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1604553779431" />
-    <state x="539" y="305" width="555" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605788159950">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="539" y="305" width="555" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1605788159950" />
-    <state x="550" y="170" key="FileChooserDialogImpl" timestamp="1605107011972">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="550" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605107011972" />
-    <state width="1493" height="185" key="GridCell.Tab.0.bottom" timestamp="1605788370909">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="226" key="GridCell.Tab.0.bottom/-320.-1440.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1599201909985" />
-    <state width="1493" height="185" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605788370909" />
-    <state width="1877" height="226" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599963185729" />
-    <state width="2517" height="324" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.1009.1536.824/2560.-691.1440.2520@0.0.2560.1400" timestamp="1598603235919" />
-    <state width="1493" height="185" key="GridCell.Tab.0.center" timestamp="1605788370909">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="226" key="GridCell.Tab.0.center/-320.-1440.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1599201909985" />
-    <state width="1493" height="185" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605788370909" />
-    <state width="1877" height="226" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599963185729" />
-    <state width="2517" height="324" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.1009.1536.824/2560.-691.1440.2520@0.0.2560.1400" timestamp="1598603235919" />
-    <state width="1493" height="185" key="GridCell.Tab.0.left" timestamp="1605788370909">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="226" key="GridCell.Tab.0.left/-320.-1440.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1599201909985" />
-    <state width="1493" height="185" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605788370909" />
-    <state width="1877" height="226" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599963185729" />
-    <state width="2517" height="324" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.1009.1536.824/2560.-691.1440.2520@0.0.2560.1400" timestamp="1598603235919" />
-    <state width="1493" height="185" key="GridCell.Tab.0.right" timestamp="1605788370909">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1877" height="226" key="GridCell.Tab.0.right/-320.-1440.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1599201909985" />
-    <state width="1493" height="185" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605788370909" />
-    <state width="1877" height="226" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599963185729" />
-    <state width="2517" height="324" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.1009.1536.824/2560.-691.1440.2520@0.0.2560.1400" timestamp="1598603235919" />
-    <state width="1493" height="183" key="GridCell.Tab.1.bottom" timestamp="1604640705954">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="183" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604640705954" />
-    <state width="1493" height="183" key="GridCell.Tab.1.center" timestamp="1604640705954">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="183" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1604640705954" />
-    <state width="1493" height="183" key="GridCell.Tab.1.left" timestamp="1604640705954">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="183" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1604640705954" />
-    <state width="1493" height="183" key="GridCell.Tab.1.right" timestamp="1604640705954">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="183" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1604640705954" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605788252674">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605788252674" />
-    <state x="433" y="151" width="672" height="673" key="search.everywhere.popup" timestamp="1604412492562">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="433" y="151" width="672" height="673" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604412492562" />
+    <MESSAGE value="删除RFID" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除RFID" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
