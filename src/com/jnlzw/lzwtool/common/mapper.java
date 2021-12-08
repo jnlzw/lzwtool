@@ -101,11 +101,7 @@ public class mapper {
                     }
                 }
             }
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
+        } catch (SecurityException | IllegalAccessException | IllegalArgumentException e) {
             e.printStackTrace();
         }
     }

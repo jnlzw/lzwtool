@@ -1,51 +1,34 @@
 package com.jnlzw.lzwtool.Solutions;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Queue;
+public class Solution {
 
-/**
- * s = "3[a]2[bc]", 返回 "aaabcbc".
- * s = "3[a2[c]]", 返回 "accaccacc".
- * s = "2[abc]3[cd]ef", 返回 "abcabccdcdcdef".
- */
+    public int getMaxValue(int[] nums, int[] values) {
+        // num.length < values.length
 
-class Solution {
-
-    public String stringX(String str, int n) {
-        StringBuilder strBuilder = new StringBuilder();
-        while (n-- > 0) strBuilder.append(str);
-        str = strBuilder.toString();
-        return str;
-    }
-
-    public String decodeString(String s) {
-        System.out.println("s.length() = " + s.length());
-        StringBuilder ans = new StringBuilder();
-        Deque<String> str = new LinkedList<>();
-        for (int i = 0, j = s.length(); i < j; i++) {
-            if (s.charAt(i)!=']')str.addLast(""+s.charAt(i));
-            else { //遇到]
-                System.out.println("i = " + i);
-                //先回收字符串
-                StringBuilder tempStr= new StringBuilder();
-                while (!str.peekLast().equals("[")) tempStr.insert(0,str.pollLast());
-                str.pollLast();
-                //再回收数字
-                System.out.println(str.peekLast());
-                StringBuilder tempNum= new StringBuilder();
-                while (str.size()>0&&str.peekLast().compareTo("9")<=0&&str.peekLast().compareTo("0")>=0)tempNum.insert(0,str.pollLast());
-                str.addLast(stringX(tempStr.toString(),Integer.parseInt(tempNum.toString())));
+        // num.length = value.length
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i; j + 1 < nums.length; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    nums[j] = nums[j] + nums[j + 1];
+                    nums[j + 1] = nums[j] - nums[j + 1];
+                    nums[j] = nums[j] - nums[j + 1];
+                    values[j] = values[j] + values[j + 1];
+                    values[j + 1] = values[j] - values[j + 1];
+                    values[j] = values[j] - values[j + 1];
+                }
             }
         }
-        while (str.size()>0) ans.append(str.pollFirst());
-        return ans.toString();
+        int result = 0, l = 0, r = values.length - 1;
+        for (int num : nums) {
+            if (values[l] < values[r]) {
+                result += num * values[l];
+                l++;
+            } else {
+                result += num * values[r];
+                r--;
+            }
+        }
+        return result;
     }
 
-    public static void main(String[] args) {
-        Solution solution=new Solution();
-        System.out.println(solution.decodeString("3[a]2[b4[F]c]"
-        ));
-    }
 }
