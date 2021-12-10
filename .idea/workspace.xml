@@ -27,10 +27,42 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="删除RFID">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="modify rename">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/KMP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/KMP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/LZW.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/LZW.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/MyCircularDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/MyCircularDeque.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/Pow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/Pow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/Sort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/StringNumCalculate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/StringNumCalculate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BPlusTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BPlusTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BloomFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/Heap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/Heap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree$Tree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree$Tree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/UnionFindSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/UnionFindSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/BIOClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/BIOClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/BIOServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/BIOServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/NIOClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/NIOClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/NIOServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/NIOServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/ListNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/TreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/pair.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +100,15 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lizhenwei" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -86,101 +126,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="sqlserver" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../carcre" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Code/lzwtool/pom.xml",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.jnlzw.lzwtool.Algorithms" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Code\lzw-tool\src\com\jnlzw\lzwtool\demo" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.jnlzw.lzwtool.Algorithms" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jnlzw.lzwtool.common" />
+    </key>
   </component>
-  <component name="RunManager" selected="应用程序.BloomFilter">
-    <configuration name="ArithmeticCoding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Algorithms.ArithmeticCoding" />
-      <module name="lzw-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.Algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BloomFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.DataStructures.BloomFilter" />
-      <module name="lzw-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.DataStructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Solutions.Solution8" />
-      <module name="lzw-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.Algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Solutions.Solution9" />
-      <module name="lzw-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.Algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Test" />
-      <module name="lzw-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -192,13 +157,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.javaIO.BIOClient" />
+      <module name="lzw-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jnlzw.lzwtool.javaIO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.javaIO.BIOServer" />
+      <module name="lzw-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jnlzw.lzwtool.javaIO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Main" />
+      <module name="lzw-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jnlzw.lzwtool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.javaIO.NIOClient" />
+      <module name="lzw-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jnlzw.lzwtool.javaIO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.javaIO.NIOServer" />
+      <module name="lzw-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jnlzw.lzwtool.javaIO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.BloomFilter" />
-        <item itemvalue="应用程序.ArithmeticCoding" />
-        <item itemvalue="应用程序.Test" />
-        <item itemvalue="应用程序.Solution8" />
-        <item itemvalue="应用程序.Solution9" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -339,6 +365,40 @@
       <workItem from="1610117869841" duration="53000" />
       <workItem from="1610121145249" duration="31000" />
       <workItem from="1610292106902" duration="257000" />
+      <workItem from="1610369979505" duration="101000" />
+      <workItem from="1612117005985" duration="158000" />
+      <workItem from="1615976063976" duration="1124000" />
+      <workItem from="1616048704670" duration="84000" />
+      <workItem from="1624807126172" duration="172000" />
+      <workItem from="1625734961082" duration="593000" />
+      <workItem from="1634474794589" duration="20000" />
+      <workItem from="1637937698723" duration="356000" />
+      <workItem from="1637938113256" duration="84000" />
+      <workItem from="1637938958189" duration="21000" />
+      <workItem from="1637939072163" duration="127000" />
+      <workItem from="1637939227066" duration="128000" />
+      <workItem from="1637939371430" duration="22000" />
+      <workItem from="1637939421828" duration="5000" />
+      <workItem from="1638022791935" duration="1081000" />
+      <workItem from="1638088152700" duration="2575000" />
+      <workItem from="1638253047200" duration="1085000" />
+      <workItem from="1638365537315" duration="1284000" />
+      <workItem from="1638425045906" duration="3937000" />
+      <workItem from="1638584622958" duration="3644000" />
+      <workItem from="1638719892078" duration="83000" />
+      <workItem from="1638867009038" duration="13000" />
+      <workItem from="1638940880377" duration="3039000" />
+      <workItem from="1638952418827" duration="3026000" />
+      <workItem from="1638958638599" duration="1294000" />
+      <workItem from="1639118434444" duration="1302000" />
+      <workItem from="1650699151862" duration="1000" />
+      <workItem from="1650699172524" duration="621000" />
+      <workItem from="1650700757803" duration="15000" />
+      <workItem from="1650700792562" duration="344000" />
+      <workItem from="1651315399364" duration="47000" />
+      <workItem from="1651315463133" duration="22000" />
+      <workItem from="1651315503036" duration="42000" />
+      <workItem from="1651315563330" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="单词接龙">
       <created>1576465484781</created>
@@ -396,7 +456,42 @@
       <option name="project" value="LOCAL" />
       <updated>1605949150771</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add mapper">
+      <created>1610370068466</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610370068466</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add mapper">
+      <created>1612117148182</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612117148182</updated>
+    </task>
+    <task id="LOCAL-00011" summary="JavaIO">
+      <created>1638942596431</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1638942596431</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add javaEffective">
+      <created>1645256139888</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1645256139888</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add javaEffective">
+      <created>1645256245092</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1645256245092</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -416,7 +511,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -425,7 +532,18 @@
       <map>
         <entry key="Branch">
           <value>
-            <list />
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
         <entry key="User">
@@ -435,7 +553,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -447,7 +564,21 @@
     <MESSAGE value="修改Readme" />
     <MESSAGE value="字符串模拟大数计算" />
     <MESSAGE value="删除RFID" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除RFID" />
+    <MESSAGE value="add mapper" />
+    <MESSAGE value="JavaIO" />
+    <MESSAGE value="add javaEffective" />
+    <option name="LAST_COMMIT_MESSAGE" value="add javaEffective" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/solutions/Solution.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

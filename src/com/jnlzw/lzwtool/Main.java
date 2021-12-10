@@ -13,8 +13,40 @@ import java.util.stream.Stream;
  */
 
 
-
 public class Main {
-    public static void main(String[] args) {
+
+    public int[] searchRange(int[] A, int target) {
+        // write code here
+        int l = 0, r = A.length - 1;
+        while (l < r) {
+            int mid = (l + r) / 2;
+            if (A[mid] >= target) r = mid - 1;
+            else l = mid + 1;
+        }
+        int ansl = l;
+
+        l = 0;
+        r = A.length - 1;
+        while (l < r) {
+            int mid = (l + r) / 2;
+            if (A[mid] > target) r = mid - 1;
+            else l = mid + 1;
+        }
+        int ansr = l;
+
+        if (A[ansl] != target) ansl += 1;
+        if (A[ansr] != target) ansr -= 1;
+        // 不存在的情况
+        if (ansl >= A.length || A[ansl] != target)
+            ansl = ansr = -1;
+
+        return new int[]{ansl, ansr};
     }
+
+    public static void main(String[] args) {
+        Main main = new Main();
+        System.out.println(main.searchRange(new int[]{1}, 0)[0]);
+    }
+
+
 }
