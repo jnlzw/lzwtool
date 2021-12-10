@@ -27,10 +27,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="删除RFID">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="JavaIO">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_1_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,20 +118,23 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.jnlzw.lzwtool.Algorithms" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Code\lzw-tool\src\com\jnlzw\lzwtool\demo" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.jnlzw.lzwtool.Algorithms" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jnlzw.lzwtool.common" />
+    </key>
   </component>
-  <component name="RunManager" selected="应用程序.BloomFilter">
-    <configuration name="ArithmeticCoding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Algorithms.ArithmeticCoding" />
+  <component name="RunManager" selected="应用程序.Main">
+    <configuration name="BIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.JavaIO.BIOClient" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.Algorithms.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.JavaIO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +142,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BloomFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.DataStructures.BloomFilter" />
+    <configuration name="BIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.JavaIO.BIOServer" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.DataStructures.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.JavaIO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,38 +155,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Solutions.Solution8" />
-      <module name="lzw-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.Algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Solutions.Solution9" />
-      <module name="lzw-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.Algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Test" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.Main" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.jnlzw.lzwtool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.JavaIO.NIOClient" />
+      <module name="lzw-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jnlzw.lzwtool.JavaIO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.JavaIO.NIOServer" />
+      <module name="lzw-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jnlzw.lzwtool.JavaIO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -194,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.BloomFilter" />
-        <item itemvalue="应用程序.ArithmeticCoding" />
-        <item itemvalue="应用程序.Test" />
-        <item itemvalue="应用程序.Solution8" />
-        <item itemvalue="应用程序.Solution9" />
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.BIOClient" />
+        <item itemvalue="应用程序.BIOServer" />
+        <item itemvalue="应用程序.NIOServer" />
+        <item itemvalue="应用程序.NIOClient" />
       </list>
     </recent_temporary>
   </component>
@@ -339,6 +352,32 @@
       <workItem from="1610117869841" duration="53000" />
       <workItem from="1610121145249" duration="31000" />
       <workItem from="1610292106902" duration="257000" />
+      <workItem from="1610369979505" duration="101000" />
+      <workItem from="1612117005985" duration="158000" />
+      <workItem from="1615976063976" duration="1124000" />
+      <workItem from="1616048704670" duration="84000" />
+      <workItem from="1624807126172" duration="172000" />
+      <workItem from="1625734961082" duration="593000" />
+      <workItem from="1634474794589" duration="20000" />
+      <workItem from="1637937698723" duration="356000" />
+      <workItem from="1637938113256" duration="84000" />
+      <workItem from="1637938958189" duration="21000" />
+      <workItem from="1637939072163" duration="127000" />
+      <workItem from="1637939227066" duration="128000" />
+      <workItem from="1637939371430" duration="22000" />
+      <workItem from="1637939421828" duration="5000" />
+      <workItem from="1638022791935" duration="1081000" />
+      <workItem from="1638088152700" duration="2575000" />
+      <workItem from="1638253047200" duration="1085000" />
+      <workItem from="1638365537315" duration="1284000" />
+      <workItem from="1638425045906" duration="3937000" />
+      <workItem from="1638584622958" duration="3644000" />
+      <workItem from="1638719892078" duration="83000" />
+      <workItem from="1638867009038" duration="13000" />
+      <workItem from="1638940880377" duration="3039000" />
+      <workItem from="1638952418827" duration="3026000" />
+      <workItem from="1638958638599" duration="1294000" />
+      <workItem from="1639118434444" duration="1302000" />
     </task>
     <task id="LOCAL-00001" summary="单词接龙">
       <created>1576465484781</created>
@@ -396,7 +435,28 @@
       <option name="project" value="LOCAL" />
       <updated>1605949150771</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add mapper">
+      <created>1610370068466</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610370068466</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add mapper">
+      <created>1612117148182</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612117148182</updated>
+    </task>
+    <task id="LOCAL-00011" summary="JavaIO">
+      <created>1638942596431</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1638942596431</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -447,7 +507,20 @@
     <MESSAGE value="修改Readme" />
     <MESSAGE value="字符串模拟大数计算" />
     <MESSAGE value="删除RFID" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除RFID" />
+    <MESSAGE value="add mapper" />
+    <MESSAGE value="JavaIO" />
+    <option name="LAST_COMMIT_MESSAGE" value="JavaIO" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

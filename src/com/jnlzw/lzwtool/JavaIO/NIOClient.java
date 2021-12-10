@@ -11,15 +11,10 @@ import java.util.Set;
 
 public class NIOClient {
     public static void main(String[] args) throws IOException, InterruptedException {
-        //创建客户端socket通道 & 连接host:port
         SocketChannel socketChannel = SocketChannel.open();
-        //设置为非阻塞模式
         socketChannel.configureBlocking(false);
-        //非阻塞的形式连接服务器，如果直接使用open带参数的，连接的时候是阻塞连接
         socketChannel.connect(new InetSocketAddress("127.0.0.1", 9999));
-        //新创建一个selector
         Selector selector = Selector.open();
-        //将该通道注册到该selector上，并且注明感兴趣的事件
         socketChannel.register(selector, SelectionKey.OP_CONNECT | SelectionKey.OP_READ);
         while (true){
             selector.select();
@@ -30,10 +25,7 @@ public class NIOClient {
                 iterator.remove();
                 //连接事件
                 if(selectionKey.isConnectable()){
-                    //看源码的注释可以知道，如果不使用带参数的open，那么需要手动调用这个方法完成连接
-                    //如果是阻塞模式，该方法会阻塞到连接成功，非阻塞模式下，会立刻返回，已连接true，未连接false
                     if(socketChannel.finishConnect()){
-                        //需要取消连接事件，否则会一直触发该事件,注册写事件
                         selectionKey.interestOps(selectionKey.interestOps() & ~SelectionKey.OP_CONNECT | SelectionKey.OP_WRITE);
                     }
                 } else if(selectionKey.isReadable()){
@@ -53,7 +45,6 @@ public class NIOClient {
                         throw  new RuntimeException("连接已断开");
                     }
                     selectionKey.interestOps(selectionKey.interestOps() & ~SelectionKey.OP_WRITE);
-                    //这个只是控制一下发送数据的速度
                     Thread.sleep(1000);
                 }
             }
