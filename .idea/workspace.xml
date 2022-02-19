@@ -28,19 +28,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="JavaIO">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_1_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/KMP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/LZW.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/MyCircularDeque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Pow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/Sort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Algorithms/StringNumCalculate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/DataStructures/BPlusTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/DataStructures/BTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/DataStructures/BloomFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/DataStructures/Heap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/DataStructures/SegmentTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/DataStructures/UnionFindSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/BIOServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/JavaIO/NIOServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/ListNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/TreeNode.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +96,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lizhenwei" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -112,6 +135,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -129,12 +153,23 @@
     </key>
   </component>
   <component name="RunManager" selected="应用程序.Main">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.JavaIO.BIOClient" />
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.javaIO.BIOClient" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.JavaIO.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.javaIO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,11 +178,11 @@
       </method>
     </configuration>
     <configuration name="BIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.JavaIO.BIOServer" />
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.javaIO.BIOServer" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.JavaIO.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.javaIO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,11 +204,11 @@
       </method>
     </configuration>
     <configuration name="NIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.JavaIO.NIOClient" />
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.javaIO.NIOClient" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.JavaIO.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.javaIO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,11 +217,11 @@
       </method>
     </configuration>
     <configuration name="NIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.JavaIO.NIOServer" />
+      <option name="MAIN_CLASS_NAME" value="com.jnlzw.lzwtool.javaIO.NIOServer" />
       <module name="lzw-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jnlzw.lzwtool.JavaIO.*" />
+          <option name="PATTERN" value="com.jnlzw.lzwtool.javaIO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -194,24 +229,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Main" />
-        <item itemvalue="应用程序.BIOClient" />
-        <item itemvalue="应用程序.BIOServer" />
         <item itemvalue="应用程序.NIOServer" />
         <item itemvalue="应用程序.NIOClient" />
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.BIOServer" />
+        <item itemvalue="应用程序.BIOClient" />
       </list>
     </recent_temporary>
   </component>
@@ -495,7 +519,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -509,13 +532,14 @@
     <MESSAGE value="删除RFID" />
     <MESSAGE value="add mapper" />
     <MESSAGE value="JavaIO" />
-    <option name="LAST_COMMIT_MESSAGE" value="JavaIO" />
+    <MESSAGE value="add javaEffective" />
+    <option name="LAST_COMMIT_MESSAGE" value="add javaEffective" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/Solutions/Solution.java</url>
+          <url>file://$PROJECT_DIR$/src/com/jnlzw/lzwtool/solutions/Solution.java</url>
           <line>31</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
