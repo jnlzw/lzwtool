@@ -27,43 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="modify rename">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/ArithmeticCoding.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/GeneticAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/KMP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/KMP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/LZW.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/LZW.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/MyCircularDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/MyCircularDeque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/Pow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/Pow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/Sort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/StringNumCalculate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Algorithms/StringNumCalculate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BPlusTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BPlusTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/BloomFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/Heap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/Heap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree$Tree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree$Tree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/SegmentTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/UnionFindSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/DataStructures/UnionFindSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/BIOClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/BIOClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/BIOServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/BIOServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/NIOClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/NIOClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/NIOServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/JavaIO/NIOServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/Solution9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jnlzw/lzwtool/Solutions/pair.class" afterDir="false" />
-    </list>
+    <list default="true" id="cba2dc76-8043-48b0-be34-622ec5dc87e8" name="Default Changelist" comment="modify rename" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,14 +90,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Code/lzwtool/pom.xml",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/lzwtool/pom.xml&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Code\lzw-tool\src\com\jnlzw\lzwtool\demo" />
@@ -491,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645256245092</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="modify rename">
+      <created>1651336848063</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651336848063</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -567,7 +538,8 @@
     <MESSAGE value="add mapper" />
     <MESSAGE value="JavaIO" />
     <MESSAGE value="add javaEffective" />
-    <option name="LAST_COMMIT_MESSAGE" value="add javaEffective" />
+    <MESSAGE value="modify rename" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify rename" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
