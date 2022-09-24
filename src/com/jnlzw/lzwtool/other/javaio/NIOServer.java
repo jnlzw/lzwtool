@@ -1,21 +1,21 @@
-package com.jnlzw.lzwtool.other.javaIO;
+package com.jnlzw.lzwtool.other.javaio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
-public class NIOClient {
-    public static void main(String[] args) throws IOException, InterruptedException {
-        SocketChannel socketChannel = SocketChannel.open();
-        socketChannel.configureBlocking(false);
-        socketChannel.connect(new InetSocketAddress("127.0.0.1", 9999));
+public class NIOServer {
+    public static void main(String[] args) throws IOException {
+        ServerSocketChannel serverSocketChannel = ServerSocketChannel.open().bind(new InetSocketAddress(9999));
+        serverSocketChannel.configureBlocking(false);
         Selector selector = Selector.open();
-        socketChannel.register(selector, SelectionKey.OP_CONNECT | SelectionKey.OP_READ);
+        serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         while (true){
             selector.select();
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
@@ -23,12 +23,12 @@ public class NIOClient {
             while (iterator.hasNext()){
                 SelectionKey selectionKey = iterator.next();
                 iterator.remove();
-                //连接事件
-                if(selectionKey.isConnectable()){
-                    if(socketChannel.finishConnect()){
-                        selectionKey.interestOps(selectionKey.interestOps() & ~SelectionKey.OP_CONNECT | SelectionKey.OP_WRITE);
-                    }
+                if(selectionKey.isAcceptable()){
+                    SocketChannel socketChannel = ((ServerSocketChannel) selectionKey.channel()).accept();
+                    socketChannel.configureBlocking(false);
+                    socketChannel.register(selector, SelectionKey.OP_READ);
                 } else if(selectionKey.isReadable()){
+                    SocketChannel socketChannel = (SocketChannel)selectionKey.channel();
                     ByteBuffer buffer = ByteBuffer.allocate(32);
                     int len = socketChannel.read(buffer);
                     if(len == -1){
@@ -40,12 +40,12 @@ public class NIOClient {
                     System.out.println("recv:" + new String(buf, 0, len));
                     selectionKey.interestOps(selectionKey.interestOps() | SelectionKey.OP_WRITE);
                 } else if(selectionKey.isWritable()){
+                    SocketChannel socketChannel = (SocketChannel)selectionKey.channel();
                     int len = socketChannel.write(ByteBuffer.wrap("hello".getBytes()));
                     if(len == -1){
                         throw  new RuntimeException("连接已断开");
                     }
                     selectionKey.interestOps(selectionKey.interestOps() & ~SelectionKey.OP_WRITE);
-                    Thread.sleep(1000);
                 }
             }
         }

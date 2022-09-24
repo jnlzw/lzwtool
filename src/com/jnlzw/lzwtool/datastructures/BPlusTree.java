@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.dataStructures;
+package com.jnlzw.lzwtool.datastructures;
 
 /**
  * Created by lzw on 2020/4/13.

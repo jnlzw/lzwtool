@@ -43,7 +43,8 @@ public class Sort {
         }
         while (i <= m) tempNum[index++] = num[i++];
         while (j <= e) tempNum[index++] = num[j++];
-        System.arraycopy(tempNum, 0, num, s, index);//复制数组
+        //复制数组
+        System.arraycopy(tempNum, 0, num, s, index);
     }
 
 
@@ -56,7 +57,8 @@ public class Sort {
             T t = num[i];
             num[i] = num[0];
             num[0] = t;
-            N = N - 1;//注意！ 每次将最后一位置为最大位后 maxHeapify时不再考虑
+            //注意！ 每次将最后一位置为最大位后 maxHeapify时不再考虑
+            N = N - 1;
             maxHeapify(num,0,N,c);
         }
     }
@@ -129,7 +131,6 @@ public class Sort {
             count[value]--;
         }
         System.arraycopy(tempNum, 0, num, 0, N);
-        Sort sort=new Sort();
         reversalArray(num);
     }
 
