@@ -1,5 +1,9 @@
 package com.jnlzw.lzwtool.algorithms;
 
+/**
+ * 循环队列
+ */
+
 class MyCircularDeque {
     int[] nums;
     int s = 0;
@@ -61,7 +65,7 @@ class MyCircularDeque {
      * Get the front item from the deque.
      */
     public int getFront() {
-        if (SIZE<=0)return -1;
+        if (SIZE <= 0) return -1;
         return nums[(s + 1 + MAXSIZE) % MAXSIZE];
     }
 
@@ -69,7 +73,7 @@ class MyCircularDeque {
      * Get the last item from the deque.
      */
     public int getRear() {
-        if (SIZE<=0)return -1;
+        if (SIZE <= 0) return -1;
         return nums[(e - 1 + MAXSIZE) % MAXSIZE];
     }
 

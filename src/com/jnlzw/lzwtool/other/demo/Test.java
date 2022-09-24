@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.demo;
+package com.jnlzw.lzwtool.other.demo;
 
 import java.util.LinkedHashMap;
 

@@ -2,6 +2,10 @@ package com.jnlzw.lzwtool.algorithms;
 import java.util.*;
 
 
+/**
+ * 排序算法合集
+ */
+
 public class Sort {
 
     //插入排序

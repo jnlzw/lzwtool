@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Created by lzw on 2020/5/30
+ * LZW压缩算法
  */
 public class LZW {
     public List<Integer> encode(String data) {

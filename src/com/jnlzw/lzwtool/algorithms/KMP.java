@@ -2,6 +2,8 @@ package com.jnlzw.lzwtool.algorithms;
 
 /**
  * Created by lzw on 2019/10/28.
+ *
+ * KMP字符串匹配
  */
 
 public class KMP {

@@ -1,35 +1,53 @@
 package com.jnlzw.lzwtool;
 
-import java.util.ArrayDeque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by lzw on 2020/5/1
  */
 public class Test {
-    public boolean fun(String str) {
-        ArrayDeque<Character> deque = new ArrayDeque<>();
-        for (int i = 0; i < str.length(); i++) {
-            if ('(' == str.charAt(i)) {
-                deque.add(str.charAt(i));
-            }
-            if (')' == str.charAt(i)) {
-                if (deque.size() == 0) return false;
-                char remove = deque.removeFirst();
-                if ('(' != remove) return false;
-            }
+    public static void main(String[] args) {
+        while (true) {
+            Scanner input = new Scanner(System.in);
+            int i = input.nextInt();
+            int result = function(i);
+            System.out.println(result);
         }
-        return deque.size() == 0;
     }
 
-    public static void main(String[] args) {
-        Integer int1= 1000;
-        Integer int2= 1000;
-        Integer int3= 100;
-        Integer int4= 100;
+    public static int function(int i) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
-        System.out.println(int1==int2);
-        System.out.println(int3==int4);
+
+        for (int j = 0; j < 10; j++) {
+            function2(i);
+        }
+
+        return i * i;
+    }
+
+    public static int function2(int i) {
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        function3(i);
+
+        return -1;
+    }
+
+    public static int function3(int i) {
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        return -1;
     }
 }

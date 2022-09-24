@@ -5,6 +5,7 @@ package com.jnlzw.lzwtool.algorithms;
 /**
  * 字符串形式正整数数字计算
  */
+
 public class StringNumCalculate {
     public static void main(String[] args) {
         System.out.println(multiply("525",

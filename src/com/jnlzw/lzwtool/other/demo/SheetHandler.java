@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.demo;
+package com.jnlzw.lzwtool.other.demo;
 
 /**
  * Created by lzw on 2020/5/16

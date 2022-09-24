@@ -4,7 +4,9 @@ import java.math.BigInteger;
 
 /**
  * Created by lzw on 2020/4/27.
+ * 快速幂
  */
+
 public class Pow {
     public long pow(int a, int b) {
         long ans = 1;

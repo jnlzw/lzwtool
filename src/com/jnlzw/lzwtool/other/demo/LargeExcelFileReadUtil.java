@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.demo;
+package com.jnlzw.lzwtool.other.demo;
 
 /**
  * Created by lzw on 2020/5/16
@@ -6,7 +6,6 @@ package com.jnlzw.lzwtool.demo;
 
 import java.io.InputStream;
 import java.util.*;
-import java.util.Map.Entry;
 
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xssf.eventusermodel.XSSFReader;

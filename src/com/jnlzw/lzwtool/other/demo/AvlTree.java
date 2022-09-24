@@ -1,8 +1,7 @@
-package com.jnlzw.lzwtool.demo;
+package com.jnlzw.lzwtool.other.demo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  *  排序二叉树

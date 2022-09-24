@@ -1,17 +1,15 @@
 package com.jnlzw.lzwtool.algorithms;
 
-/**
- * Created by lzw on 2020/7/5
- */
-/*
- * Created by 李振威 on 2019/7/31.
- */
-
 import java.lang.Math;
 import java.util.Random;
 import java.util.function.LongBinaryOperator;
 
-//基因遗传算法
+/**
+ * Created by lzw on 2020/7/5
+ * 基因遗传算法
+ */
+
+
 public class GeneticAlgorithm {
      /*
     确立决策变量以及约束条件
@@ -98,25 +96,36 @@ public class GeneticAlgorithm {
     }
 
     public static void main(String[] args) {
+        double max = -1;
+        for (int n = 0; n < 100; n++) {
+            //初始化gene数组
+            for (int i = 0; i < N; i++) {
+                Random r = new Random();
+                gene[i] = (long) Math.floor(r.nextDouble() * Math.pow(2.0, 22.0));
+                //System.out.println(decoding(gene[i]));
+            }
 
-        //初始化gene数组
-        for (int i = 0; i < N; i++) {
-            Random r = new Random();
-            gene[i] = (long) Math.floor(r.nextDouble() * Math.pow(2.0, 22.0));
-            //System.out.println(decoding(gene[i]));
-        }
-        for (int k = 0; k < Ger; k++) {
-            selection();
-            recombination();
-            mutation();
             double sum = 0;
             double maxGene = -10;
-            for (int m = 0; m < N; m++) {
-                sum += function(decoding(gene[m]));
-                maxGene = Math.max(maxGene, function(decoding(gene[m])));
+
+            for (int k = 0; k < Ger; k++) {
+                selection();
+                recombination();
+                mutation();
+
+                for (int m = 0; m < N; m++) {
+                    sum += function(decoding(gene[m]));
+                    maxGene = Math.max(maxGene, function(decoding(gene[m])));
+                }
+                // System.out.printf("平均值%f  最大值%f\n", sum / N, maxGene);
             }
-            System.out.printf("平均值%f  最大值%f\n", sum / N, maxGene);
+
+            max = Math.max(max, maxGene);
         }
+
+        System.out.println("max = " + max);
+
+
     }
 }
 
