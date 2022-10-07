@@ -1,5 +1,6 @@
 package com.jnlzw.lzwtool.algorithms.graph;
 
+import javafx.util.Pair;
 import org.apache.commons.lang3.tuple.Triple;
 
 import java.util.List;
@@ -11,19 +12,21 @@ public interface Graph {
      *
      * @param from 起始节点
      * @param to   目标节点
-     * @param val  边值
+     * @param cap  容量
      */
-    void addRoute(int from, int to, int val);
+    void addRoute(int from, int to, int cap);
+
+    void addRoute(int from, int to, int cap, int cost);
 
 
     /**
-     * 获取边值
+     * 获取某条边容量
      *
      * @param from 起始节点
      * @param to   目标节点
      * @return 边值
      */
-    int getRouteVal(int from, int to);
+    int getRouteCap(int from, int to);
 
 
     /**

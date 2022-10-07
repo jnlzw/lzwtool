@@ -17,18 +17,18 @@ public class MaxFlow {
             path.clear();
 
             // 搜索路径
-            int maxVal = DFS(graph, from, to, path, new HashSet<>(), 1 << 30);
-//            System.out.println("maxVal = " + maxVal);
+            int maxCap = DFS(graph, from, to, path, new HashSet<>(), 1 << 30);
+//            System.out.println("maxCap = " + maxCap);
 //            System.out.println("path = " + path);
 
-            maxFlow += maxVal;
+            maxFlow += maxCap;
 
             // 重置图
             for (Triple<Integer, Integer, Integer> route : path) {
                 Integer left = route.getLeft();
                 Integer right = route.getMiddle();
-                graph.addRoute(left, right, -1 * maxVal);
-                graph.addRoute(right, left, maxVal);
+                graph.addRoute(left, right, -1 * maxCap);
+                graph.addRoute(right, left, maxCap);
             }
         } while (!CollectionUtils.isEmpty(path));
 
@@ -38,9 +38,9 @@ public class MaxFlow {
     }
 
     // 带路径的深度优先搜索
-    private static int DFS(Graph graph, int now, int to, List<Triple<Integer, Integer, Integer>> path, Set<Integer> flag, int maxVal) {
+    private static int DFS(Graph graph, int now, int to, List<Triple<Integer, Integer, Integer>> path, Set<Integer> flag, int maxCap) {
         if (now == to) {
-            return maxVal;
+            return maxCap;
         }
 
         // 查询所有可行路径
@@ -54,9 +54,9 @@ public class MaxFlow {
             flag.add(route.getMiddle());
             path.add(route);
             // 递归调用
-            int val = DFS(graph, route.getMiddle(), to, path, flag, Math.min(maxVal, route.getRight()));
-            if (val != 0) {
-                return val;
+            int cap = DFS(graph, route.getMiddle(), to, path, flag, Math.min(maxCap, route.getRight()));
+            if (cap != 0) {
+                return cap;
             }
             path.remove(route);
             flag.remove(route.getMiddle());

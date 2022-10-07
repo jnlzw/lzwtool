@@ -1,6 +1,5 @@
 package com.jnlzw.lzwtool.algorithms.graph;
 
-import javafx.util.Pair;
 import org.apache.commons.lang3.tuple.Triple;
 
 import java.util.*;
@@ -9,7 +8,8 @@ public class AdjacencyList implements Graph {
 
     private static class Node {
         private int to;
-        private int val;
+        private int cap;
+        private int cost;
         private Node next;
     }
 
@@ -35,21 +35,23 @@ public class AdjacencyList implements Graph {
     }
 
     @Override
-    public void addRoute(int from, int to, int val) {
+    public void addRoute(int from, int to, int cap, int cost) {
         Head head = map.get(from);
         Node headNode = head.headNode;
         HashSet<Integer> flagSet = head.flagSet;
         if (!flagSet.contains(to)) {
             Node next = new Node();
-            next.val = val;
             next.to = to;
+            next.cap = cap;
+            next.cost = cost;
             next.next = headNode;
             head.headNode = next;
             flagSet.add(to);
         } else {
             while (null != headNode) {
                 if (headNode.to == to) {
-                    headNode.val = headNode.val + val;
+                    headNode.cap = headNode.cap + cap;
+                    headNode.cost = headNode.cost + cost;
                     return;
                 }
                 headNode = headNode.next;
@@ -58,11 +60,17 @@ public class AdjacencyList implements Graph {
     }
 
     @Override
-    public int getRouteVal(int from, int to) {
+    public void addRoute(int from, int to, int cap) {
+        addRoute(from, to, cap, 0);
+    }
+
+
+    @Override
+    public int getRouteCap(int from, int to) {
         Node node = map.get(from).headNode;
         while (node != null) {
             if (node.to == to) {
-                return node.val;
+                return node.cap;
             }
             node = node.next;
         }
@@ -75,7 +83,7 @@ public class AdjacencyList implements Graph {
         Head head = map.get(from);
         Node headNode = head.headNode;
         while (headNode != null) {
-            Triple<Integer, Integer, Integer> route = Triple.of(from, headNode.to, headNode.val);
+            Triple<Integer, Integer, Integer> route = Triple.of(from, headNode.to, headNode.cap);
             allRoute.add(route);
             headNode = headNode.next;
         }
@@ -92,7 +100,7 @@ public class AdjacencyList implements Graph {
                 System.out.print("->");
                 if (null != root) {
                     int node = root.to;
-                    int val = root.val;
+                    int val = root.cap;
                     System.out.printf("(%s,%s)", node, val);
                     next = root.next;
                 }
