@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.algorithms;
+package com.jnlzw.lzwtool.commom.algorithms;
 
 /**
  * 循环队列

@@ -1,8 +1,7 @@
-package com.jnlzw.lzwtool.algorithms;
+package com.jnlzw.lzwtool.commom.algorithms;
 
 import java.lang.Math;
 import java.util.Random;
-import java.util.function.LongBinaryOperator;
 
 /**
  * Created by lzw on 2020/7/5

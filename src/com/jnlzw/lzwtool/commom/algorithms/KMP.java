@@ -1,8 +1,8 @@
-package com.jnlzw.lzwtool.algorithms;
+package com.jnlzw.lzwtool.commom.algorithms;
 
 /**
  * Created by lzw on 2019/10/28.
- *
+ * <p>
  * KMP字符串匹配
  */
 
@@ -55,6 +55,7 @@ public class KMP {
         else
             return -1;
     }
+
 
     public static void main(String[] args) {
 

@@ -1,53 +1,25 @@
 package com.jnlzw.lzwtool;
 
+
+import cn.hutool.json.JSON;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONObjectIter;
+
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  * Created by lzw on 2020/5/1
  */
 public class Test {
     public static void main(String[] args) {
-        while (true) {
-            Scanner input = new Scanner(System.in);
-            int i = input.nextInt();
-            int result = function(i);
-            System.out.println(result);
-        }
-    }
+        Scanner scanner = new Scanner(System.in);
+        String next = scanner.next();
+        next = "{\"a\":\"1\",\"B\":2,\"C\":{\"D\":\"3\"}}";
 
-    public static int function(int i) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        JSONObject jsonObject = new JSONObject(next);
+        Set<Map.Entry<String, Object>> entries = jsonObject.entrySet();
 
-
-        for (int j = 0; j < 10; j++) {
-            function2(i);
-        }
-
-        return i * i;
-    }
-
-    public static int function2(int i) {
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        function3(i);
-
-        return -1;
-    }
-
-    public static int function3(int i) {
-        try {
-            Thread.sleep(50);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        return -1;
     }
 }

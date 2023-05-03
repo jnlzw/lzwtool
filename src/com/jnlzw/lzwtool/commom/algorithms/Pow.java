@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.algorithms;
+package com.jnlzw.lzwtool.commom.algorithms;
 
 import java.math.BigInteger;
 
@@ -47,4 +47,8 @@ public class Pow {
         Pow pow = new Pow();
         System.out.println(pow.pow(1, 1000000000));
     }
+    
+
+    
+
 }

@@ -1,5 +1,7 @@
-package com.jnlzw.lzwtool.algorithms;
-import java.util.*;
+package com.jnlzw.lzwtool.commom.algorithms;
+
+import java.util.Comparator;
+import java.util.Random;
 
 
 /**
@@ -25,7 +27,6 @@ public class Sort {
     }
 
 
-
     //归并排序
     public <T> void mergeSort(T[] num, Comparator<? super T> c) {
         perMergeSort(num, 0, num.length - 1, c);
@@ -39,7 +40,7 @@ public class Sort {
         T[] tempNum = (T[]) new Object[num.length];
         int i = s, j = m + 1, index = 0;
         while (i <= m && j <= e) {
-            tempNum[index++] = c.compare(num[i] ,num[j])<0 ? num[i++] : num[j++];
+            tempNum[index++] = c.compare(num[i], num[j]) < 0 ? num[i++] : num[j++];
         }
         while (i <= m) tempNum[index++] = num[i++];
         while (j <= e) tempNum[index++] = num[j++];
@@ -48,63 +49,63 @@ public class Sort {
     }
 
 
-
     //堆排序
-    public <T> void heapSort(T[] num,Comparator<? super T> c) {
-        int N=num.length;
-        buildMaxHeap(num,c);
+    public <T> void heapSort(T[] num, Comparator<? super T> c) {
+        int N = num.length;
+        buildMaxHeap(num, c);
         for (int i = N - 1; i > 0; i--) {
             T t = num[i];
             num[i] = num[0];
             num[0] = t;
             //注意！ 每次将最后一位置为最大位后 maxHeapify时不再考虑
             N = N - 1;
-            maxHeapify(num,0,N,c);
+            maxHeapify(num, 0, N, c);
         }
     }
-    private <T> void maxHeapify(T[] num,int index,int length,Comparator<? super T> c) {
+
+    private <T> void maxHeapify(T[] num, int index, int length, Comparator<? super T> c) {
         int largest = index;
-        if (index * 2 + 1 < length && c.compare(num[largest] , num[index * 2 + 1])>0) {
+        if (index * 2 + 1 < length && c.compare(num[largest], num[index * 2 + 1]) > 0) {
             largest = index * 2 + 1;
         }
-        if (index * 2 + 2 < length && c.compare(num[largest] , num[index * 2 + 1])>0) {
+        if (index * 2 + 2 < length && c.compare(num[largest], num[index * 2 + 1]) > 0) {
             largest = index * 2 + 2;
         }
         if (largest != index) {
             T t = num[index];
             num[index] = num[largest];
             num[largest] = t;
-            maxHeapify(num,largest,length,c);
-        }
-    }
-    private<T>  void buildMaxHeap(T[] num,Comparator<? super T> c) {
-        for (int i = num.length / 2; i >= 0; i--) {
-            maxHeapify(num,i,num.length,c);
+            maxHeapify(num, largest, length, c);
         }
     }
 
+    private <T> void buildMaxHeap(T[] num, Comparator<? super T> c) {
+        for (int i = num.length / 2; i >= 0; i--) {
+            maxHeapify(num, i, num.length, c);
+        }
+    }
 
 
     //快速排序 随机数优化
-    public <T> void quickSort(T[] num,Comparator<? super T> c) {
-        perQuickSort(num, 0, num.length - 1,c);
+    public <T> void quickSort(T[] num, Comparator<? super T> c) {
+        perQuickSort(num, 0, num.length - 1, c);
     }
 
-    private <T> void perQuickSort(T[] num, int p, int r,Comparator<? super T> c) {
+    private <T> void perQuickSort(T[] num, int p, int r, Comparator<? super T> c) {
         if (p < r) {
-            int q = partition(num, p, r,c);
-            perQuickSort(num, p, q - 1,c);
-            perQuickSort(num, q + 1, r,c);
+            int q = partition(num, p, r, c);
+            perQuickSort(num, p, q - 1, c);
+            perQuickSort(num, q + 1, r, c);
         }
     }
 
-    private <T> int partition(T[] num, int p, int r,Comparator<? super T> c) {
-        Random random=new Random();
+    private <T> int partition(T[] num, int p, int r, Comparator<? super T> c) {
+        Random random = new Random();
         //随机选取key值，防止算法退化为冒泡
-        T key = num[p+ random.nextInt(r-p)];
+        T key = num[p + random.nextInt(r - p)];
         int i = p;
         for (int j = p; j < r; j++) {
-            if (c.compare(num[j] , key)<0) {
+            if (c.compare(num[j], key) < 0) {
                 T t = num[j];
                 num[j] = num[i];
                 num[i] = t;
@@ -139,9 +140,9 @@ public class Sort {
     public <T> void reversalArray(T[] num) {
         int l = 0, r = num.length - 1;
         while (l < r) {
-            T t=num[l];
-            num[l]=num[r];
-            num[r]=t;
+            T t = num[l];
+            num[l] = num[r];
+            num[r] = t;
             l++;
             r--;
         }

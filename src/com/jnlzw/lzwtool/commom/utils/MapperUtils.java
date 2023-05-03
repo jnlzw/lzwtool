@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.common;
+package com.jnlzw.lzwtool.commom.utils;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * 方便类之间的属性映射。
  */
-public class mapper {
+public class MapperUtils {
     public static <T, Y> T mapTo(Y a, Class<T> b) {
         T to = null;
         try {

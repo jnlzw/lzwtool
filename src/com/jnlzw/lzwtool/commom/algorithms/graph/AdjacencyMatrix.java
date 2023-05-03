@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.algorithms.graph;
+package com.jnlzw.lzwtool.commom.algorithms.graph;
 
 import org.apache.commons.lang3.tuple.Triple;
 

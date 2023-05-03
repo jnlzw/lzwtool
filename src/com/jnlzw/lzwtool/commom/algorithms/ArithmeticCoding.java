@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.algorithms;
+package com.jnlzw.lzwtool.commom.algorithms;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
