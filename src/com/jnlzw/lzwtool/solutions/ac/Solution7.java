@@ -1,7 +1,4 @@
-package com.jnlzw.lzwtool.solutions;
-import com.sun.javafx.image.impl.IntArgb;
-
-import java.util.*;
+package com.jnlzw.lzwtool.solutions.ac;
 
 /**
  * Created by lzw on 2020/4/18.

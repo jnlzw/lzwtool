@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.solutions;
+package com.jnlzw.lzwtool.solutions.ac;
 import java.util.Deque;
 import java.util.LinkedList;
 

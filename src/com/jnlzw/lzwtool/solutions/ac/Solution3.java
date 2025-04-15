@@ -1,4 +1,8 @@
-package com.jnlzw.lzwtool.solutions;
+package com.jnlzw.lzwtool.solutions.ac;
+
+
+import com.jnlzw.lzwtool.solutions.ListNode;
+
 class Solution3 {
     public ListNode rotateRight(ListNode head, int k) {
         if (head==null) return null;

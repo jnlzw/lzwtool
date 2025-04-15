@@ -1,4 +1,6 @@
-package com.jnlzw.lzwtool.solutions;
+package com.jnlzw.lzwtool.solutions.ac;
+
+import com.jnlzw.lzwtool.solutions.TreeNode;
 
 public class Solution4 {
     TreeNode function(int[] nums, int l, int r) {

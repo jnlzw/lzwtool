@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.solutions;
+package com.jnlzw.lzwtool.solutions.ac;
 public class Solution {
 
     public int getMaxValue(int[] nums, int[] values) {

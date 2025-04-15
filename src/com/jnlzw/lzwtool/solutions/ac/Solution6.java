@@ -1,9 +1,4 @@
-package com.jnlzw.lzwtool.solutions;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Objects;
+package com.jnlzw.lzwtool.solutions.ac;
 
 public class Solution6 {
     public boolean backspaceCompare(String S, String T) {

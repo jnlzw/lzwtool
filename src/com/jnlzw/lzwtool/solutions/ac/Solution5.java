@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.solutions;
+package com.jnlzw.lzwtool.solutions.ac;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
