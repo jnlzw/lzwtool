@@ -1,4 +1,4 @@
-package com.jnlzw.lzwtool.java;
+package com.jnlzw.lzwtool.other;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
