@@ -1,18 +1,43 @@
-# LZW工具箱
-- algorithms
-    - ArithmeticCoding 算数编码
-    - LZW LZW压缩算法
-    - GeneticAlgorithm 基因遗传算法 求复杂方程最值点（存在误差，有可能收敛到极值点
-    - KMP 字符串快速匹配
-    - Pow 快速幂 可以使用大数类接收返回值
-    - Sort 排序工具类 泛型实现
-- dataStructures
-    - BloomFilter 布隆过滤器（还是不要使用自己实现的为好 
-    - BPlusTree B+树
-    - BTree B树
-    - Heap 大顶堆或者小顶堆 类似优先队列
-    - SegmentTree 线段树 求数组区间和、最大值、最小值的时间复杂度降低为logN，区间修改的时间复杂度降低为logN。
-    - UnionFindSet 并查集 求最小生成树会用到
-- demo 用平衡排序二叉树解决大数据量Excel文件查询慢的问题
-- solution 小部分LeetCode AC代码
-- javaEffective 
+# LZW 工具箱
+
+一个以 **Java** 实现的算法与数据结构练习仓库，包含常见算法、数据结构、图论与若干示例代码。
+
+## 环境要求
+
+- JDK 1.8
+- Maven 3.x
+
+## 项目结构
+
+- `src/com/jnlzw/lzwtool/commom/algorithms`
+  - `ArithmeticCoding`：算术编码
+  - `LZW`：LZW 压缩算法
+  - `GeneticAlgorithm`：遗传算法（用于复杂方程最值搜索）
+  - `KMP`：字符串快速匹配
+  - `Pow`：快速幂（可配合大数类型使用）
+  - `Sort`：排序算法工具类（泛型实现）
+- `src/com/jnlzw/lzwtool/commom/algorithms/graph`
+  - 图相关算法与结构（如最短路、最大流等）
+- `src/com/jnlzw/lzwtool/commom/datastructures`
+  - `BloomFilter`：布隆过滤器
+  - `BPlusTree`：B+ 树
+  - `BTree`：B 树
+  - `Heap`：堆（大顶堆/小顶堆）
+  - `SegmentTree`：线段树
+  - `UnionFindSet`：并查集
+- `src/com/jnlzw/lzwtool/solutions`
+  - 部分 LeetCode 题解
+- `src/com/jnlzw/lzwtool/other`
+  - 并发、IO、NIO/BIO、Excel 读取等示例
+
+## 待完善方向
+
+- 最短路
+- 最小生成树
+- 关键路径
+- 最大流
+- 最小割
+
+## 说明
+
+本仓库偏向学习与实验用途，部分代码可能仍在持续迭代中。
