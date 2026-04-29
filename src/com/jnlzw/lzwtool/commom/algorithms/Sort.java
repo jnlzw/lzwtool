@@ -29,6 +29,7 @@ public class Sort {
 
     //归并排序
     public <T> void mergeSort(T[] num, Comparator<? super T> c) {
+        if (num == null || num.length < 2) return;
         perMergeSort(num, 0, num.length - 1, c);
     }
 
@@ -51,6 +52,7 @@ public class Sort {
 
     //堆排序
     public <T> void heapSort(T[] num, Comparator<? super T> c) {
+        if (num == null || num.length < 2) return;
         int N = num.length;
         buildMaxHeap(num, c);
         for (int i = N - 1; i > 0; i--) {
@@ -68,7 +70,7 @@ public class Sort {
         if (index * 2 + 1 < length && c.compare(num[largest], num[index * 2 + 1]) > 0) {
             largest = index * 2 + 1;
         }
-        if (index * 2 + 2 < length && c.compare(num[largest], num[index * 2 + 1]) > 0) {
+        if (index * 2 + 2 < length && c.compare(num[largest], num[index * 2 + 2]) > 0) {
             largest = index * 2 + 2;
         }
         if (largest != index) {
@@ -88,6 +90,7 @@ public class Sort {
 
     //快速排序 随机数优化
     public <T> void quickSort(T[] num, Comparator<? super T> c) {
+        if (num == null || num.length < 2) return;
         perQuickSort(num, 0, num.length - 1, c);
     }
 
@@ -101,19 +104,23 @@ public class Sort {
 
     private <T> int partition(T[] num, int p, int r, Comparator<? super T> c) {
         Random random = new Random();
-        //随机选取key值，防止算法退化为冒泡
-        T key = num[p + random.nextInt(r - p)];
+        int pivotIndex = p + random.nextInt(r - p + 1);
+        T t = num[pivotIndex];
+        num[pivotIndex] = num[r];
+        num[r] = t;
+        T pivot = num[r];
         int i = p;
         for (int j = p; j < r; j++) {
-            if (c.compare(num[j], key) < 0) {
-                T t = num[j];
+            if (c.compare(num[j], pivot) < 0) {
+                T tmp = num[j];
                 num[j] = num[i];
-                num[i] = t;
-                i = i + 1;
+                num[i] = tmp;
+                i++;
             }
         }
-        num[r] = num[i];
-        num[i] = key;
+        T tmp = num[i];
+        num[i] = num[r];
+        num[r] = tmp;
         return i;
     }
 
@@ -121,18 +128,22 @@ public class Sort {
     //计数排序
     //计数排序的count数组长度为10000，num数组内的数字最大值为9999，可以更改。
     public void countSort(Integer[] num) {
+        if (num == null || num.length < 2) return;
         int N = num.length;
-        int[] count = new int[10000];
-        for (int i = 0; i < 100; i++) count[i] = 0;
-        for (int value : num) count[value]++;
-        for (int i = 98; i >= 0; i--) count[i] += count[i + 1];
-        Integer[] tempNum = new Integer[N];
+        int max = num[0];
         for (int value : num) {
+            if (value > max) max = value;
+        }
+        int[] count = new int[max + 1];
+        for (int value : num) count[value]++;
+        for (int i = 1; i < count.length; i++) count[i] += count[i - 1];
+        Integer[] tempNum = new Integer[N];
+        for (int i = N - 1; i >= 0; i--) {
+            int value = num[i];
             tempNum[count[value] - 1] = value;
             count[value]--;
         }
         System.arraycopy(tempNum, 0, num, 0, N);
-        reversalArray(num);
     }
 
 
