@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>背包问题 · 动画讲解</title>
+<style>
+  :root {
+    --src: #ffd166;
+    --dst: #4cc9f0;
+    --done: #06d6a0;
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --ink: #2b2d42;
+    --muted: #8d99ae;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+  }
+  header {
+    background: var(--ink); color: #fff; padding: 28px 20px 20px;
+    position: sticky; top: 0; z-index: 10;
+  }
+  header h1 { margin: 0 0 8px; font-size: 22px; max-width: 880px; margin-inline: auto; }
+  nav { max-width: 880px; margin: 0 auto; font-size: 13px; }
+  nav a { color: #a9d6f5; margin-right: 14px; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  main { max-width: 880px; margin: 24px auto 80px; padding: 0 20px; }
+  .card {
+    background: var(--card); border-radius: 12px; padding: 24px 28px;
+    margin-bottom: 28px; box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  }
+  h2 { font-size: 19px; margin: 0 0 6px; }
+  h2 .tag {
+    font-size: 12px; font-weight: normal; color: #fff; background: var(--done);
+    border-radius: 4px; padding: 2px 8px; margin-left: 8px; vertical-align: middle;
+  }
+  .problem { color: var(--muted); font-size: 14px; margin: 6px 0 12px; }
+  .insight {
+    background: #fff8e6; border-left: 4px solid var(--src);
+    padding: 10px 14px; border-radius: 0 8px 8px 0; font-size: 14px; margin: 10px 0 16px;
+  }
+  code, pre {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    background: #eef1f7; border-radius: 4px;
+  }
+  code { padding: 1px 6px; font-size: 13px; }
+  pre { padding: 12px 16px; font-size: 13px; overflow-x: auto; line-height: 1.6; }
+  .items { display: flex; gap: 10px; margin: 14px 0 6px; flex-wrap: wrap; }
+  .chip {
+    border: 2px solid #dfe3ec; border-radius: 8px; padding: 6px 10px;
+    font-size: 13px; background: #fafbfe; transition: all .2s; text-align: center;
+  }
+  .chip.active { border-color: var(--dst); background: #e8f7fd; transform: scale(1.06); }
+  .dprow { display: flex; gap: 6px; margin: 16px 0 4px; }
+  .cell {
+    width: 52px; text-align: center; border-radius: 8px; padding: 8px 0 4px;
+    border: 2px solid #e3e6ef; background: #fafbfe; transition: all .15s;
+  }
+  .cell .v { font-size: 17px; font-weight: 600; font-family: Menlo, monospace; min-height: 22px; }
+  .cell .idx { font-size: 11px; color: var(--muted); }
+  .cell.src { border-color: var(--src); background: #fff3d6; }
+  .cell.dst { border-color: var(--dst); background: #e3f6fd; transform: scale(1.08); }
+  .cell.hit { border-color: var(--done); background: #e2fbf2; }
+  .legend { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
+  .legend i {
+    display: inline-block; width: 11px; height: 11px; border-radius: 3px;
+    margin: 0 4px 0 12px; vertical-align: -1px;
+  }
+  .status {
+    font-family: Menlo, monospace; font-size: 13px; background: #2b2d42;
+    color: #d8e2ff; border-radius: 8px; padding: 10px 14px; margin: 14px 0;
+    min-height: 40px; display: flex; align-items: center;
+  }
+  .controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  button, select {
+    font: inherit; font-size: 13px; border: 1px solid #cfd5e3; background: #fff;
+    border-radius: 6px; padding: 6px 14px; cursor: pointer;
+  }
+  button:hover { background: #f0f3fa; }
+  button.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .progress { font-size: 12px; color: var(--muted); margin-left: auto; }
+  .dir { font-size: 12px; color: var(--muted); margin-top: 2px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>背包问题动画讲解</h1>
+  <nav>
+    <a href="#s1">① 0/1 背包</a>
+    <a href="#s2">② 分割等和子集</a>
+    <a href="#s3">③ 零钱兑换 II（组合）</a>
+    <a href="#s4">④ 组合总和 IV（排列）</a>
+    <a href="#s5">⑤ 一和零（二维费用）</a>
+    <a href="#s6">⑥ 盈利计划（"至少"钳位）</a>
+    <a href="#s7">⑦ 广告牌（三选一+快照）</a>
+    <a href="#s8">⑧ 刷墙（难在建模）</a>
+    <a href="#s9">⑨ 单词拆分（换皮背包）</a>
+    <a href="#s10">⑩ 预测赢家（区间博弈）</a>
+    <a href="#s11">⑪ 打家劫舍III（树形DP）</a>
+  </nav>
+</header>
+<main>
+
+<div class="card">
+  <h2>先看三句话</h2>
+  <p>背包问题的 DP 都是同一件事：<b>逐个考虑物品，逐步更新 dp 数组</b>。要抓的只有三点：</p>
+  <ul>
+    <li><b>状态</b>：<code>dp[j]</code> = 容量 j 的背包能达到的某种指标（最大价值 / 是否可行 / 方案数）</li>
+    <li><b>转移</b>：从 <code>dp[j - w]</code> 推导 <code>dp[j]</code>（选这件 or 不选）</li>
+    <li><b>顺序</b>：<b>0/1 倒序、完全正序；组合外物品内容量、排列外容量内物品</b></li>
+  </ul>
+  <p>下面 4 个动画，每个都只演示一条 dp 数组的更新过程。点「播放」看它自己走，或用「下一步」慢慢品。</p>
+</div>
+
+<div class="card" id="s1">
+  <h2>① 0/1 背包 —— 一切的根基 <span class="tag">P10</span></h2>
+  <p class="problem">
+    <b>题目：</b>有 n 件物品和一个容量为 capacity 的背包，第 i 件物品重
+    weights[i]、价值 values[i]，每件最多选一次，求不超过容量时的最大价值。<br>
+    <b>示例：</b>输入 weights=[2,3,4,5], values=[3,4,5,6], capacity=5 →
+    输出 <b>7</b>（选物品0+物品1：重 5，值 3+4）。
+  </p>
+  <div class="insight">
+    <code>dp[j] = max(dp[j], dp[j - w[i]] + v[i])</code>。<br>
+    一维数组必须<b>从右往左</b>更新：右边先改，左边的 <code>dp[j-w]</code>
+    还是"没选过当前物品"的旧值，保证每件物品只用一次。正序就漏了——看下一个动画对比。
+  </div>
+  <pre>for (int i = 0; i &lt; n; i++)
+    for (int j = C; j &gt;= w[i]; j--)   // 倒序！
+        dp[j] = max(dp[j], dp[j - w[i]] + v[i]);</pre>
+  <div class="viz" id="viz1"></div>
+</div>
+
+<div class="card" id="s2">
+  <h2>② 分割等和子集 —— 0/1 的"可行性"变体 <span class="tag">P13 · LeetCode 416</span></h2>
+  <p class="problem">
+    <b>题目（LC 416）：</b>给你一个只含正整数的非空数组 nums，判断能否把它
+    分割成两个子集，使两个子集的元素和相等。<br>
+    <b>示例：</b>输入 nums=[1,5,11,5] → 输出 <b>true</b>
+    （[1,5,5] 与 [11]）。提示：总和 22，问题等价于"能否凑出 11"。
+  </p>
+  <div class="insight">
+    数字既是重量也是价值，背包容量 = sum/2。<br>
+    <code>dp[j] = dp[j] || dp[j - num]</code>：boolean 数组，转移用"或"。
+    最后只看 <code>dp[11]</code> 一格。
+  </div>
+  <pre>for (int num : nums)
+    for (int j = target; j &gt;= num; j--)
+        dp[j] = dp[j] || dp[j - num];</pre>
+  <div class="viz" id="viz2"></div>
+</div>
+
+<div class="card" id="s3">
+  <h2>③ 零钱兑换 II —— 完全背包"组合数" <span class="tag">P16 · LeetCode 518</span></h2>
+  <p class="problem">
+    <b>题目（LC 518）：</b>给你整数数组 coins 表示不同面额硬币、整数 amount
+    表示总金额，每种硬币有无限个。返回凑成总金额的硬币<b>组合数</b>
+    （凑不出返回 0）。<br>
+    <b>示例：</b>输入 amount=5, coins=[1,2,5] → 输出 <b>4</b>
+    （5 / 2+2+1 / 2+1+1+1 / 1×5）。
+  </p>
+  <div class="insight">
+    无限件 → <b>正序</b>遍历：左边先改，<code>dp[j-coin]</code> 可能已含当前硬币，正好允许重复选。<br>
+    <b>外层硬币、内层容量</b>保证硬币按顺序加入：{1,2} 和 {2,1} 只算一种 → 组合数。
+  </div>
+  <pre>dp[0] = 1;
+for (int coin : coins)                        // 外物品
+    for (int j = coin; j &lt;= amount; j++)      // 内容量，正序
+        dp[j] += dp[j - coin];</pre>
+  <div class="viz" id="viz3"></div>
+</div>
+
+<div class="card" id="s4">
+  <h2>④ 组合总和 IV —— 完全背包"排列数" <span class="tag">P17 · LeetCode 377</span></h2>
+  <p class="problem">
+    <b>题目（LC 377）：</b>给你由<b>不同</b>整数组成的数组 nums 和目标整数
+    target，元素可重复用。返回总和为 target 的组合个数——注意<b>顺序不同
+    算不同方案</b>（实为排列）。<br>
+    <b>示例：</b>输入 nums=[1,2,3], target=4 → 输出 <b>7</b>
+    （1111 / 112 / 121 / 211 / 22 / 13 / 31）。
+  </p>
+  <div class="insight">
+    与 518 题面几乎一样，唯一差别是"顺序不同算不同"。<br>
+    解法上体现为<b>内外循环颠倒</b>：外层容量、内层物品。对每个容量 j，
+    任何物品都可能排在最后一位 → 排列数。
+  </div>
+  <pre>dp[0] = 1;
+for (int j = 1; j &lt;= target; j++)           // 外容量
+    for (int num : nums)                      // 内物品
+        if (j &gt;= num) dp[j] += dp[j - num];</pre>
+  <div class="viz" id="viz4"></div>
+</div>
+
+<div class="card" id="s5">
+  <h2>⑤ 一和零 —— 二维费用 0/1 背包 <span class="tag">P19 · LeetCode 474</span></h2>
+  <p class="problem">
+    <b>题目（LC 474）：</b>给你二进制字符串数组 strs 和两个整数 m、n。
+    返回 strs 的最大子集的大小，要求子集中 '0' 不超过 m 个、'1' 不超过 n 个。<br>
+    <b>示例：</b>输入 strs=["10","0001","111001","1","0"], m=5, n=3 →
+    输出 <b>4</b>（子集 {"10","0001","1","0"}：共 5 个 0、3 个 1；
+    "111001" 有 4 个 1 装不下）。
+  </p>
+  <div class="insight">
+    普通背包只有一种"费用"（重量）；这题每个字符串同时消耗两种费用：
+    0 的个数和 1 的个数。所以 dp 表是二维的：<br>
+    <code>dp[i][j] = max(dp[i][j], dp[i-z][j-o] + 1)</code>，
+    z/o 是当前串的 0/1 个数。<br>
+    仍然是 0/1 背包 → <b>两个维度都倒序</b>。动画里蓝格是 <code>dp[i][j]</code>，
+    黄格是它读取的左上方向 <code>dp[i−z][j−o]</code>。
+  </div>
+  <pre>for (String s : strs) { int z = cnt(s,'0'), o = cnt(s,'1');
+    for (int i = m; i &gt;= z; i--)          // 两个维度都倒序
+        for (int j = n; j &gt;= o; j--)
+            dp[i][j] = max(dp[i][j], dp[i-z][j-o] + 1); }</pre>
+  <div class="viz" id="viz5"></div>
+</div>
+
+<div class="card" id="s6">
+  <h2>⑥ 盈利计划 —— "至少" 是道坎 <span class="tag">P22 · LeetCode 879 · 困难</span></h2>
+  <p class="problem">
+    <b>题目（LC 879）：</b>有 n 名员工。第 i 种工作需要 group[i] 人参与、
+    产生 profit[i] 利润，每种工作最多做一次，同一人不能同时做两项。
+    返回总利润<b>至少</b>为 minProfit 的计划数（参与总人数 ≤ n），
+    对 10⁹+7 取模。<br>
+    <b>示例：</b>输入 n=5, minProfit=3, group=[2,2], profit=[2,3] →
+    输出 <b>2</b>（只做工作1 {利润3}，或两件都做 {利润5}；
+    只做工作0 利润 2 不达标）。
+  </p>
+  <div class="insight">
+    二维费用（人数 + 利润）+ 方案数，但真正的坑是"<b>至少</b> minProfit"：
+    利润超出的方案不能按真实利润分开存，否则同一个方案会被重复计数。<br>
+    技巧叫<b>钳位</b>：dp 第三维只开到 minProfit，转移时
+    <code>dp[i][j] += dp[i−g][max(0, j−p)]</code>——超额利润统统压到
+    <code>j = minProfit</code> 那一格。答案也不是一格，是 <code>j=minProfit</code>
+    整列之和（人数 ≤ n 都行）。
+  </div>
+  <pre>for (int k = 0; k &lt; group.length; k++) { int g = group[k], p = profit[k];
+    for (int i = n; i &gt;= g; i--)
+        for (int j = minProfit; j &gt;= 0; j--)
+            dp[i][j] += dp[i-g][max(0, j-p)]; }   // j 也倒序，二维都是 0/1</pre>
+  <div class="viz" id="viz6"></div>
+</div>
+
+<div class="card" id="s7">
+  <h2>⑦ 最高的广告牌 —— 状态本身就是答案的一半 <span class="tag">P23 · LeetCode 956 · 困难</span></h2>
+  <p class="problem">
+    <b>题目（LC 956）：</b>安装一个广告牌需要两个<b>等长</b>的钢架。
+    给你一堆钢筋 rods，每根可以焊到任意一边或不使用。返回广告牌的最大
+    可能高度（公共长度），无法安装返回 0。<br>
+    <b>示例：</b>输入 rods=[1,2,3,6] → 输出 <b>6</b>
+    （一边 {6}，另一边 {1,2,3}）。
+  </p>
+  <div class="insight">
+    背包 dp 不一定索引"容量"。这题的状态是<b>差值</b>：
+    <code>dp[d]</code> = 两边差为 d 时，较长边的最大长度。<br>
+    每根杆有<b>三种</b>选择：不放 / 放高边 / 放矮边——一次读取要往两个格子写，
+    就地更新会拿新值算旧值，所以必须<b>整行快照</b>（clone 上一步）。
+    不是所有背包都能滚动数组原地改！
+  </div>
+  <pre>int[] cp = dp.clone();                      // 快照：读旧写新
+for (int d = 0; d &lt;= sum; d++) {
+    ndp[d + r] = max(ndp[d + r], cp[d] + r);              // 放高边
+    ndp[abs(d - r)] = max(ndp[abs(d-r)], cp[d] + max(r-d, 0)); // 放矮边
+}</pre>
+  <div class="viz" id="viz7"></div>
+</div>
+
+<div class="card" id="s8">
+  <h2>⑧ 给墙壁刷油漆 —— 最难的一步在 DP 之前 <span class="tag">P24 · LeetCode 2742 · 困难</span></h2>
+  <p class="problem">
+    <b>题目（LC 2742）：</b>两个等长数组 cost 和 time：付费工人刷第 i 面墙
+    收费 cost[i]、耗时 time[i]；另有一名免费工人，在付费工人干活的每个
+    单位时间能免费刷一面墙（不重复刷已刷的）。返回刷完全部 n 面墙的
+    <b>最少</b>花费。<br>
+    <b>示例：</b>输入 cost=[1,2,3,2], time=[1,2,3,2] → 输出 <b>3</b>
+    （付费刷墙0 花1元耗时1→免费刷1面，付费刷墙3 花2元耗时2→免费刷2面，
+    共 2+3=5 ≥ 4 面，花 1+2=3）。
+  </p>
+  <div class="insight">
+    建模转换：付费刷第 i 面墙的 time[i] 期间，免费工人顺手刷掉
+    time[i] 面 → 付费一面等价于"覆盖 <b>time[i]+1</b> 面墙"。<br>
+    于是一个 0/1 背包出现了：容量 = 墙数 n，费用 = cost，
+    求盖满 n 的<b>最小</b>花费——注意是 min 模式、不可达用 ∞，
+    且读取端要钳到 0：<code>dp[j] = min(dp[j], dp[max(0, j−w)] + cost)</code>。
+  </div>
+  <pre>for (int i = 0; i &lt; n; i++) { int w = time[i] + 1;
+    for (int j = n; j &gt;= 0; j--)
+        dp[j] = min(dp[j], dp[max(0, j - w)] + cost[i]); }</pre>
+  <div class="viz" id="viz8"></div>
+</div>
+
+<div class="card" id="s9">
+  <h2>⑨ 单词拆分 —— 穿着字符串外衣的完全背包 <span class="tag">P25 · LeetCode 139</span></h2>
+  <p class="problem">
+    <b>题目（LC 139）：</b>给你字符串 s 和字符串列表 wordDict 作为字典，
+    判断 s 能否由字典中的单词拼接而成。单词<b>可以重复使用</b>，
+    不必全部用上。<br>
+    <b>示例：</b>输入 s="leetcode", wordDict=["leet","code"] → 输出
+    <b>true</b>（"leet"+"code"）。反例：s="catsandog",
+    dict=["cats","dog","sand","and","cat"] → false。
+  </p>
+  <div class="insight">
+    把字符串当背包、单词当物品：<code>dp[j]</code> = s 前 j 个字符能否拼出，
+    <code>dp[j] = dp[j] || (dp[j-len] && s[j-len..j]==word)</code>。<br>
+    单词无限供应 → 完全背包；拼接有顺序 → <b>外容量内物品</b>
+    （和 ④ 组合总和 IV 一模一样的循环结构）。<br>
+    认出这一层，这题就不用重新发明轮子了。
+  </div>
+  <pre>dp[0] = true;
+for (int j = 1; j &lt;= s.length(); j++)      // 外容量
+    for (String w : dict)                    // 内物品
+        if (j &gt;= w.length() && s.startsWith(w, j - w.length()))
+            dp[j] = dp[j] || dp[j - w.length()];</pre>
+  <div class="viz" id="viz9"></div>
+</div>
+
+<div class="card" id="s10">
+  <h2>⑩ 预测赢家 —— 转移可以一次读两个格 <span class="tag">P26 · LeetCode 486</span></h2>
+  <p class="problem">
+    <b>题目（LC 486）：</b>给你整数数组 nums，玩家1和玩家2轮流从数组的
+    <b>某一端</b>取走一个数，取走后移除，玩家1先手。双方都采取最优策略，
+    玩家1 最终得分 ≥ 玩家2 则返回 true。<br>
+    <b>示例：</b>输入 nums=[1,5,2] → 输出 <b>false</b>
+    （先手只能拿端点 1 或 2，无论拿哪个，5 都被对手拿走）。
+    示例2：nums=[1,5,233,7] → true。
+  </p>
+  <div class="insight">
+    区间 DP + 博弈：<code>dp[i][j]</code> = 区间 [i,j] 上<b>先手净胜</b>的最大分差。<br>
+    <code>dp[i][j] = max(nums[i] − dp[i+1][j], nums[j] − dp[i][j−1])</code><br>
+    拿完左边，对手在 [i+1,j] 上变先手——你的净胜 = 拿的 − 对手净胜，
+    负负得正正是博弈 DP 的味道。按<b>区间长度</b>填表，
+    动画里一格同时读<b>下方和左方</b>两个格。
+  </div>
+  <pre>for (int len = 1; len &lt;= n; len++)
+    for (int i = 0; i + len - 1 &lt; n; i++) { int j = i + len - 1;
+        dp[i][j] = len == 1 ? nums[i]
+            : max(nums[i] - dp[i+1][j], nums[j] - dp[i][j-1]); }</pre>
+  <div class="viz" id="viz10"></div>
+</div>
+
+<div class="card" id="s11">
+  <h2>⑪ 打家劫舍 III —— 真正的"树上背包" <span class="tag">P27 · LeetCode 337</span></h2>
+  <p class="problem">
+    <b>题目（LC 337）：</b>每间房子是二叉树的一个节点，直接相连的
+    父子节点不能同一天打劫（触发警报）。求一晚能盗取的最大金额。<br>
+    <b>示例：</b>输入 root=[3,2,3,null,3,null,1]（下方动画里那棵树）→
+    输出 <b>7</b>（偷根 3 + 两个叶子 3+1，祖孙不相邻）。
+    示例2：root=[3,4,5,1,3,null,1] → 9。
+  </p>
+  <div class="insight">
+    背包里"选/不选"受容量约束；树上受<b>父子邻接</b>约束。
+    每个节点算两个状态后序上交：<br>
+    <code>rob = val + 左skip + 右skip</code>（选了，孩子必不选）<br>
+    <code>skip = max(左rob,左skip) + max(右rob,右skip)</code>（不选，孩子随意）<br>
+    动画里黄节点是被读取的子节点，蓝节点正在写入它的 (选, 不选)。
+  </div>
+  <pre>int[] dfs(node) {                       // 返回 {rob, skip}
+    if (node == null) return {0, 0};
+    int[] l = dfs(node.left), r = dfs(node.right);
+    return { node.val + l[1] + r[1],
+             max(l[0], l[1]) + max(r[0], r[1]) };
+}</pre>
+  <div class="viz" id="viz11"></div>
+</div>
+
+<div class="card">
+  <h2>做完这 11 题，你就拿到了背包的钥匙</h2>
+  <p>
+    背包主线：<b>494</b>、<b>1049</b>、<b>322</b>、<b>1155 / 2218</b> 全是换装。
+    进阶三词：<b>钳位</b>（879）、<b>快照</b>（956）、<b>建模</b>（2742）。
+    换皮三家：完全背包藏进字符串（139）、净胜分藏进区间（486）、
+    "选/不选"藏进父子关系（337）。
+    以后见到 DP 题先问三句话：状态是什么？转移从哪读？顺序该正还是该倒？
+    再加一句：<b>它有没有可能是背包换了件衣服？</b>
+  </p>
+</div>
+
+</main>
+
+<script>
+// ---------- 动画引擎：预计算所有帧，渲染器只做回放 ----------
+function buildFrames(cfg) {
+  const C = cfg.C, items = cfg.items;
+  const total = cfg.size || (cfg.dim2 ? (cfg.M + 1) * (cfg.N + 1) : cfg.C + 1);
+  const dp = cfg.initArr ? [...cfg.initArr] : new Array(total).fill(cfg.init);
+  if (cfg.initIndex !== undefined) dp[cfg.initIndex] = cfg.initValue;
+  const frames = [{ dp: [...dp], item: -1, j: -1, reads: [], text: cfg.initText }];
+
+  const emit = (item, j, reads, text) =>
+    frames.push({ dp: [...dp], item, j, reads, text });
+
+  if (cfg.custom) {
+    cfg.custom(dp, emit, cfg);
+  } else if (cfg.dim2) {
+    const cols = cfg.N + 1;
+    for (let i = 0; i < items.length; i++) {
+      const it = items[i];
+      emit(i, -1, [], `考虑 ${it.label}（0:${it.z} 个，1:${it.o} 个）`);
+      for (let a = cfg.M; a >= it.z; a--) {
+        for (let b = cfg.N; b >= it.o; b--) {
+          const text = cfg.step(dp, a, b, it, cols);
+          const src = cfg.srcIdx2 ? cfg.srcIdx2(a, b, it, cols) : (a - it.z) * cols + (b - it.o);
+          emit(i, a * cols + b, [src], text);
+        }
+      }
+    }
+  } else if (cfg.outer === 'item') {
+    for (let i = 0; i < items.length; i++) {
+      const it = items[i];
+      emit(i, -1, [], `考虑 ${it.label}（w=${it.w}${it.v !== undefined ? ', v=' + it.v : ''}）`);
+      const range = cfg.range ? cfg.range(i, it)
+        : cfg.dir === 'desc'
+          ? (() => { const a = []; for (let j = C; j >= it.w; j--) a.push(j); return a; })()
+          : (() => { const a = []; for (let j = it.w; j <= C; j++) a.push(j); return a; })();
+      for (const j of range) {
+        const text = cfg.step(dp, j, it);
+        emit(i, j, [cfg.srcIdx ? cfg.srcIdx(j, it) : j - it.w], text);
+      }
+    }
+  } else { // outer = 'cap'
+    for (let j = cfg.start; j <= C; j++) {
+      for (let i = 0; i < items.length; i++) {
+        const it = items[i];
+        if (j - it.w < 0) continue;
+        const text = cfg.step(dp, j, it);
+        emit(i, j, [j - it.w], text);
+      }
+    }
+  }
+  emit(-2, -1, [], cfg.endText);
+  return frames;
+}
+
+function makeViz(id, cfg) {
+  const root = document.getElementById(id);
+  const frames = buildFrames(cfg);
+  let cur = 0, timer = null, delay = 650;
+
+  const items = document.createElement('div'); items.className = 'items';
+  cfg.items.forEach(it => {
+    const c = document.createElement('div'); c.className = 'chip';
+    c.textContent = cfg.chipText ? cfg.chipText(it)
+      : it.label + (it.v !== undefined ? `　w=${it.w} v=${it.v}` : `　w=${it.w}`);
+    items.appendChild(c);
+  });
+
+  const dir = document.createElement('div'); dir.className = 'dir';
+  dir.textContent = cfg.dirText;
+
+  const dprow = document.createElement('div'); dprow.className = 'dprow';
+  const cells = [];
+  let treeWrap = null;
+  const nodeDivs = [];
+  if (cfg.tree) {
+    treeWrap = document.createElement('div');
+    treeWrap.style.cssText = 'position:relative;height:185px;margin-top:14px;';
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '340'); svg.setAttribute('height', '185');
+    svg.style.cssText = 'position:absolute;left:0;top:0;';
+    cfg.edges.forEach(([p, c]) => {
+      const l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      l.setAttribute('x1', cfg.nodes[p].x + 34); l.setAttribute('y1', cfg.nodes[p].y + 42);
+      l.setAttribute('x2', cfg.nodes[c].x + 34); l.setAttribute('y2', cfg.nodes[c].y);
+      l.setAttribute('stroke', '#cfd5e3'); l.setAttribute('stroke-width', '2');
+      svg.appendChild(l);
+    });
+    treeWrap.appendChild(svg);
+    cfg.nodes.forEach((nd, i) => {
+      const d = document.createElement('div');
+      d.style.cssText = `position:absolute;left:${nd.x}px;top:${nd.y}px;width:68px;text-align:center;` +
+        'border:2px solid #e3e6ef;border-radius:8px;background:#fafbfe;padding:4px 0;transition:all .15s;';
+      d.innerHTML = `<b>${nd.v}</b><div class="tv" style="font-size:11px;font-family:Menlo">选- 不-</div>`;
+      treeWrap.appendChild(d); nodeDivs.push(d);
+    });
+  } else {
+    const total = cfg.dim2 ? (cfg.M + 1) * (cfg.N + 1) : cfg.C + 1;
+    if (cfg.dim2) { dprow.style.flexWrap = 'wrap'; dprow.style.width = (cfg.N + 1) * 58 + 'px'; }
+    for (let j = 0; j < total; j++) {
+      const c = document.createElement('div'); c.className = 'cell';
+      c.innerHTML = `<div class="v"></div><div class="idx">${cfg.cellLabel ? cfg.cellLabel(j) : 'j=' + j}</div>`;
+      dprow.appendChild(c); cells.push(c);
+    }
+  }
+
+  const legend = document.createElement('div'); legend.className = 'legend';
+  legend.innerHTML =
+    '<i style="background:#e3f6fd;border:1px solid #4cc9f0"></i>正在写入 dp[j]' +
+    '<i style="background:#fff3d6;border:1px solid #ffd166"></i>读取 dp[j−w]' +
+    '<i style="background:#e2fbf2;border:1px solid #06d6a0"></i>最终答案';
+
+  const status = document.createElement('div'); status.className = 'status';
+
+  const controls = document.createElement('div'); controls.className = 'controls';
+  const btnPrev = document.createElement('button'); btnPrev.textContent = '上一步';
+  const btnPlay = document.createElement('button'); btnPlay.textContent = '播放'; btnPlay.className = 'primary';
+  const btnNext = document.createElement('button'); btnNext.textContent = '下一步';
+  const btnReset = document.createElement('button'); btnReset.textContent = '重置';
+  const sel = document.createElement('select');
+  sel.innerHTML = '<option value="1200">0.5×</option><option value="650" selected>1×</option>' +
+                  '<option value="320">2×</option><option value="160">4×</option>';
+  const prog = document.createElement('span'); prog.className = 'progress';
+  controls.append(btnPrev, btnPlay, btnNext, btnReset, sel, prog);
+
+  if (cfg.tree) root.append(items, dir, treeWrap, legend, status, controls);
+  else root.append(items, dir, dprow, legend, status, controls);
+
+  function render() {
+    const f = frames[cur];
+    if (cfg.tree) {
+      nodeDivs.forEach((d, i) => {
+        d.style.borderColor = '#e3e6ef'; d.style.background = '#fafbfe'; d.style.transform = '';
+        if (f.j === i) { d.style.borderColor = '#4cc9f0'; d.style.background = '#e3f6fd'; d.style.transform = 'scale(1.08)'; }
+        else if (f.reads.includes(i)) { d.style.borderColor = '#ffd166'; d.style.background = '#fff3d6'; }
+        d.querySelector('.tv').textContent = `选${f.dp[i * 2]} 不${f.dp[i * 2 + 1]}`;
+      });
+    } else {
+      cells.forEach((c, j) => {
+        c.className = 'cell';
+        c.querySelector('.v').textContent = cfg.show(f.dp[j], j);
+        if (f.j === j) c.classList.add('dst');
+        if (f.reads.includes(j)) c.classList.add('src');
+      });
+      if (f.item === -2) cells.forEach((c, j) => { if (cfg.finalMark(j)) c.classList.add('hit'); });
+    }
+    [...items.children].forEach((c, i) => c.classList.toggle('active', f.item === i));
+    status.textContent = f.text;
+    prog.textContent = `${cur + 1} / ${frames.length}`;
+    btnPrev.disabled = cur === 0;
+    btnNext.disabled = cur === frames.length - 1;
+  }
+  function stop() { clearInterval(timer); timer = null; btnPlay.textContent = '播放'; }
+  btnPlay.onclick = () => {
+    if (timer) { stop(); return; }
+    if (cur === frames.length - 1) cur = 0;
+    btnPlay.textContent = '暂停';
+    timer = setInterval(() => {
+      if (cur < frames.length - 1) { cur++; render(); } else stop();
+    }, delay);
+  };
+  btnNext.onclick = () => { if (cur < frames.length - 1) { cur++; render(); } };
+  btnPrev.onclick = () => { if (cur > 0) { cur--; render(); } };
+  btnReset.onclick = () => { stop(); cur = 0; render(); };
+  sel.onchange = () => { delay = +sel.value; if (timer) { stop(); btnPlay.click(); } };
+  render();
+}
+
+// ---------- 4 道题 ----------
+// ① 0/1 背包：dp[j] = max(dp[j], dp[j-w]+v)，倒序
+makeViz('viz1', {
+  C: 5, dir: 'desc', outer: 'item', init: 0,
+  items: [
+    { w: 2, v: 3, label: '物品0' }, { w: 3, v: 4, label: '物品1' },
+    { w: 4, v: 5, label: '物品2' }, { w: 5, v: 6, label: '物品3' },
+  ],
+  dirText: '更新方向：j 从 5 → 物品重量（倒序）',
+  initText: '初始化：dp 全为 0（空背包价值为 0）',
+  endText: '完成！dp[5] = 7：选物品0 + 物品1，价值 3 + 4。',
+  show: v => v, finalMark: j => j === 5,
+  step(dp, j, it) {
+    const take = dp[j - it.w] + it.v, nv = Math.max(dp[j], take);
+    const txt = `dp[${j}] = max(${dp[j]}, dp[${j - it.w}]+${it.v}=${take}) → ${nv}` +
+      (nv > dp[j] ? '　选！' : '　不选更优');
+    dp[j] = nv;
+    return txt;
+  },
+});
+
+// ② 416 分割等和子集：dp[j] ||= dp[j-num]，倒序，boolean
+makeViz('viz2', {
+  C: 11, dir: 'desc', outer: 'item', init: false, initIndex: 0, initValue: true,
+  items: [{ w: 1, label: '数字1' }, { w: 5, label: '数字5' }, { w: 11, label: '数字11' }, { w: 5, label: '数字5' }],
+  dirText: '更新方向：j 从 11 → 当前数字（倒序，0/1）',
+  initText: '初始化：dp[0]=✓（和 0 总能凑出），其余 ✗。目标：dp[11]=?',
+  endText: 'dp[11] = ✓ → 可以平分！例如 [1,5,5] 和 [11]。',
+  show: v => (v ? '✓' : '·'), finalMark: j => j === 11,
+  step(dp, j, it) {
+    const old = dp[j];
+    if (!dp[j] && dp[j - it.w]) dp[j] = true;
+    return `dp[${j}] = ${old ? '✓' : '·'} || dp[${j - it.w}] (${dp[j - it.w] ? '✓' : '·'}) → ${dp[j] ? '✓' : '·'}` +
+      (!old && dp[j] ? '　变可达！' : '');
+  },
+});
+
+// ③ 518 零钱兑换 II：dp[j] += dp[j-coin]，外物品正序 → 组合数
+makeViz('viz3', {
+  C: 5, dir: 'asc', outer: 'item', init: 0, initIndex: 0, initValue: 1,
+  items: [{ w: 1, label: '硬币1' }, { w: 2, label: '硬币2' }, { w: 5, label: '硬币5' }],
+  dirText: '外层=硬币（逐个加入），内层 j 正序 → 组合数',
+  initText: '初始化：dp[0]=1（凑出 0 只有一种：什么都不选），其余 0',
+  endText: 'dp[5] = 4：5 / 2+2+1 / 2+1+1+1 / 1×5，共 4 种组合。',
+  show: v => v, finalMark: j => j === 5,
+  step(dp, j, it) {
+    const add = dp[j - it.w];
+    dp[j] += add;
+    return `硬币${it.w}：dp[${j}] += dp[${j - it.w}] = ${add}　→ ${dp[j]}` +
+      (add === 0 ? '　（无贡献）' : '');
+  },
+});
+
+// ④ 377 组合总和 IV：dp[j] += dp[j-num]，外容量内物品 → 排列数
+makeViz('viz4', {
+  C: 4, dir: 'asc', outer: 'cap', start: 1, init: 0, initIndex: 0, initValue: 1,
+  items: [{ w: 1, label: '数字1' }, { w: 2, label: '数字2' }, { w: 3, label: '数字3' }],
+  dirText: '外层=j（1→4），内层=每个数字都可能排最后 → 排列数',
+  initText: '初始化：dp[0]=1，其余 0。对每个 j 依次尝试"最后一位放 1/2/3"',
+  endText: 'dp[4] = 7：注意 dp[3]=4、dp[4]=7，比 518 的组合数大——(1,3) 和 (3,1) 分开算了。',
+  show: v => v, finalMark: j => j === 4,
+  step(dp, j, it) {
+    const add = dp[j - it.w];
+    dp[j] += add;
+    return `j=${j}，末位放 ${it.w}：dp[${j}] += dp[${j - it.w}] = ${add}　→ ${dp[j]}`;
+  },
+});
+
+// ⑤ 474 一和零：dp[i][j] = max(dp[i][j], dp[i-z][j-o]+1)，两维都倒序
+makeViz('viz5', {
+  dim2: true, M: 5, N: 3, init: 0,
+  items: [
+    { z: 1, o: 1, label: '"10"' }, { z: 3, o: 1, label: '"0001"' },
+    { z: 3, o: 3, label: '"111001"' }, { z: 0, o: 1, label: '"1"' }, { z: 1, o: 0, label: '"0"' },
+  ],
+  dirText: '更新方向：i: 5→0个数，j: 3→1个数，两维都倒序（0/1）',
+  chipText: it => `${it.label}　0:${it.z} 1:${it.o}`,
+  cellLabel: j => `${(j / 4) | 0},${j % 4}`,
+  initText: '初始化：dp[i][j] 全 0。行 = 0 的额度 i（0..5），列 = 1 的额度 j（0..3）',
+  endText: 'dp[5][3] = 4：选 "10","0001","1","0"（"111001" 恰好装不下）。',
+  show: v => v, finalMark: j => j === 23,
+  step(dp, a, b, it, cols) {
+    const dst = a * cols + b, s = (a - it.z) * cols + (b - it.o);
+    const take = dp[s] + 1, nv = Math.max(dp[dst], take);
+    const txt = `dp[${a}][${b}] = max(${dp[dst]}, dp[${a - it.z}][${b - it.o}]+1=${take}) → ${nv}` +
+      (nv > dp[dst] ? '　选！' : '　不选更优');
+    dp[dst] = nv;
+    return txt;
+  },
+});
+
+// ⑥ 879 盈利计划：二维费用方案数 + "至少"钳位，答案=利润列整列求和
+makeViz('viz6', {
+  dim2: true, M: 5, N: 3, init: 0,
+  items: [{ g: 2, p: 2, label: '差事0' }, { g: 2, p: 3, label: '差事1' }],
+  dirText: '更新方向：i: 5→人数 g，j: 3→0，两维都倒序（0/1）',
+  chipText: it => `${it.label}　人:${it.g} 利:${it.p}`,
+  cellLabel: j => `${(j / 4) | 0},${j % 4}`,
+  initText: '初始化：dp[0][0]=1。行 = 用人数 i，列 = "至少 j 利润"（j=3 即达标）',
+  endText: 'j=3 整列求和：dp[2][3]+dp[4][3] = 1+1 = 2 种方案（差事1 / 两件都做）。',
+  show: v => v,
+  finalMark: j => j % 4 === 3,
+  srcIdx2: (a, b, it, cols) => (a - it.g) * cols + Math.max(0, b - it.p),
+  step(dp, a, b, it, cols) {
+    const dst = a * cols + b, s = (a - it.g) * cols + Math.max(0, b - it.p);
+    dp[dst] += dp[s];
+    return `dp[${a}][${b}] += dp[${a - it.g}][max(0,${b - it.p})]　→ ${dp[dst]}` +
+      (dp[s] === 0 ? '　（无贡献）' : '');
+  },
+});
+
+// ⑦ 956 最高的广告牌：三选一，必须快照复制，不能就地更新
+makeViz('viz7', {
+  C: 12, outer: 'custom', init: -1e9, initIndex: 0, initValue: 0,
+  items: [{ w: 1, label: '杆1' }, { w: 2, label: '杆2' }, { w: 3, label: '杆3' }, { w: 6, label: '杆6' }],
+  dirText: '每根杆：先快照，再把每格往"高边"和"矮边"各写一次',
+  cellLabel: j => 'd=' + j,
+  initText: '初始化：dp[d]=差为 d 时较长边最大长度。dp[0]=0，其余不可达',
+  endText: 'dp[0] = 6：两边各 6——{6} 对 {1,2,3}。',
+  show: v => (v < -1e8 ? '·' : v),
+  finalMark: j => j === 0,
+  custom(dp, emit) {
+    const rods = [1, 2, 3, 6], SUM = 12;
+    rods.forEach((r, i) => {
+      const cp = [...dp];
+      emit(i, -1, [], `杆 ${r}：先复制快照（读旧值写新值）`);
+      for (let d = 0; d <= SUM; d++) {
+        if (cp[d] < -1e8) continue;
+        const show = v => (v < -1e8 ? '·' : v);
+        if (d + r <= SUM) {
+          const old = show(dp[d + r]), nv = Math.max(dp[d + r], cp[d] + r);
+          dp[d + r] = nv;
+          emit(i, d + r, [d], `放高边：dp[${d + r}] = max(${old}, ${cp[d]}+${r}) → ${nv}`);
+        }
+        const nd = Math.abs(d - r), old2 = show(dp[nd]),
+          nv2 = Math.max(dp[nd], cp[d] + Math.max(r - d, 0));
+        dp[nd] = nv2;
+        emit(i, nd, [d], `放矮边：dp[${nd}] = max(${old2}, ${cp[d]}+${Math.max(r - d, 0)}) → ${nv2}`);
+      }
+    });
+  },
+});
+
+// ⑧ 2742 给墙壁刷油漆：建模成 0/1 背包 + min 模式 + 读取端钳到 0
+makeViz('viz8', {
+  C: 4, dir: 'desc', outer: 'item', initArr: [0, 99, 99, 99, 99],
+  items: [
+    { w: 2, c: 1, label: '墙0' }, { w: 3, c: 2, label: '墙1' },
+    { w: 4, c: 3, label: '墙2' }, { w: 3, c: 2, label: '墙3' },
+  ],
+  dirText: '更新方向：j 从 4 → 0（倒序，0/1）；w = time+1 = 付费一面覆盖的总面数',
+  chipText: it => `${it.label}　w=${it.w} ¥${it.c}`,
+  initText: '初始化：dp[j]=覆盖 j 面墙的最小花费。dp[0]=0，其余 ∞（不可达）',
+  endText: 'dp[4] = 3：付费刷墙0（¥1，覆盖2面）+ 墙3（¥2，覆盖3面），共覆盖 5 ≥ 4 面。',
+  show: v => (v >= 99 ? '∞' : v),
+  finalMark: j => j === 4,
+  range: (i, it) => [4, 3, 2, 1, 0],
+  srcIdx: (j, it) => Math.max(0, j - it.w),
+  step(dp, j, it) {
+    const s = Math.max(0, j - it.w), take = dp[s] + it.c, nv = Math.min(dp[j], take);
+    const fmt = v => (v >= 99 ? '∞' : v);
+    const txt = `dp[${j}] = min(${fmt(dp[j])}, dp[${s}]+${it.c}=${fmt(take)}) → ${fmt(nv)}` +
+      (nv < dp[j] ? '　更便宜！' : '');
+    dp[j] = nv;
+    return txt;
+  },
+});
+
+// ⑨ 139 单词拆分：字符串当背包，外容量内物品（同377顺序）
+const S139 = 'leetcode';
+makeViz('viz9', {
+  C: 8, dir: 'asc', outer: 'cap', start: 1, init: false, initIndex: 0, initValue: true,
+  items: [{ w: 4, word: 'leet', label: '"leet"' }, { w: 4, word: 'code', label: '"code"' }],
+  dirText: '外层=j（1→8），内层=词典里的每个词（顺序敏感 → 排列式遍历）',
+  chipText: it => `${it.label}　len=${it.w}`,
+  initText: '初始化：dp[0]=✓（空串总能拼出）。dp[j] = s 前 j 个字符能否被拼出',
+  endText: 'dp[8] = ✓ → "leet"+"code" 拼出 s。认出来了？这就是 377 的循环结构。',
+  show: v => (v ? '✓' : '·'), finalMark: j => j === 8,
+  step(dp, j, it) {
+    const sub = S139.substring(j - it.w, j);
+    const ok = sub === it.word && dp[j - it.w];
+    if (!dp[j] && ok) dp[j] = true;
+    return `j=${j} 试 "${it.word}"：s[${j - it.w}:${j}]="${sub}" ` +
+      (sub !== it.word ? '不匹配，跳过' : `匹配 → dp[${j}]=dp[${j - it.w}]=${dp[j] ? '✓' : '·'}`);
+  },
+});
+
+// ⑩ 486 预测赢家：区间DP+博弈，一格读两格（下方和左方）
+makeViz('viz10', {
+  dim2: true, M: 2, N: 2, initArr: [0, 0, 0, -1e9, 0, 0, -1e9, -1e9, 0],
+  items: [{ label: 'len 1' }, { label: 'len 2' }, { label: 'len 3' }],
+  dirText: '按区间长度 len=1→3 填表；行 i 列 j 表示区间 nums[i..j]',
+  cellLabel: j => `${(j / 3) | 0},${j % 3}`,
+  initText: 'dp[i][j] = 区间 [i,j] 上先手净胜的最大分差。对角线 len=1 先填自己那张牌',
+  endText: 'dp[0][2] = -2 < 0 → 先手必输。注意他读的是 dp[1][2] 和 dp[0][1] 两个格。',
+  show: v => (v < -1e8 ? '·' : v),
+  finalMark: j => j === 2,
+  custom(dp, emit) {
+    const nums = [1, 5, 2];
+    for (let i = 0; i < 3; i++) {
+      dp[i * 3 + i] = nums[i];
+      emit(0, i * 3 + i, [], `len=1：dp[${i}][${i}] = ${nums[i]}（只剩一张，净胜就是它）`);
+    }
+    for (let len = 2; len <= 3; len++) {
+      for (let i = 0; i + len - 1 < 3; i++) {
+        const j = i + len - 1;
+        const left = nums[i] - dp[(i + 1) * 3 + j], right = nums[j] - dp[i * 3 + j - 1];
+        dp[i * 3 + j] = Math.max(left, right);
+        emit(len - 1, i * 3 + j, [(i + 1) * 3 + j, i * 3 + j - 1],
+          `dp[${i}][${j}] = max(${nums[i]}−${dp[(i + 1) * 3 + j]}, ${nums[j]}−${dp[i * 3 + j - 1]}) = ${dp[i * 3 + j]}`);
+      }
+    }
+  },
+});
+
+// ⑪ 337 打家劫舍 III：树形DP，后序遍历，每节点算(选,不选)
+makeViz('viz11', {
+  tree: true, size: 10, init: 0, items: [],
+  nodes: [
+    { v: 3, x: 136, y: 6 }, { v: 2, x: 52, y: 68 }, { v: 3, x: 220, y: 68 },
+    { v: 3, x: 88, y: 132 }, { v: 1, x: 256, y: 132 },
+  ],
+  edges: [[0, 1], [0, 2], [1, 3], [2, 4]],
+  children: [[1, 2], [3], [4], [], []],
+  postOrder: [3, 1, 4, 2, 0],
+  dirText: '后序遍历：先算叶子，再层层上交 (选, 不选) 两个状态',
+  initText: '每个节点算两个值：选它 / 不选它。从叶子开始上交',
+  endText: '根节点：选=3+skip(2)+skip(3)=3+3+1=7，不选=max(2,3)+max(3,1)=3+3=6 → 答案 7。',
+  custom(dp, emit, cfg) {
+    cfg.postOrder.forEach(i => {
+      const nd = cfg.nodes[i], ch = cfg.children[i];
+      const rob = nd.v + ch.reduce((s, c) => s + dp[c * 2 + 1], 0);
+      const skip = ch.reduce((s, c) => s + Math.max(dp[c * 2], dp[c * 2 + 1]), 0);
+      dp[i * 2] = rob; dp[i * 2 + 1] = skip;
+      emit(-1, i, ch, `节点 ${nd.v}：选=${nd.v}+子不选=${rob}　不选=Σmax(子)=${skip}`);
+    });
+  },
+});
+</script>
+</body>
+</html>
